@@ -6,7 +6,6 @@
 app/libs/
 
 # IDEA
-*.iml
 .idea
 .DS_Store
 
