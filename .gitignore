@@ -3,16 +3,13 @@
 /build
 /captures
 /local.properties
+app/libs/
 
 # IDEA
 *.iml
-/.idea/workspace.xml
-/.idea/libraries
+.idea
 .DS_Store
 
 # GRADLE
 .gradle
 /gradle
-.idea/modules/
-.idea/vcs.xml
-app/libs/
