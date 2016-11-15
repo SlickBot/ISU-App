@@ -1,1 +1,2 @@
-# ISU-App
+# Ustanovitev podjetja
+**Informacijski sistemi v upravi**
