@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".SplashActivity">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/welcome_screen_welcome"
+            android:id="@+id/textView"
+            android:textSize="50sp"
+            android:layout_marginTop="49dp"
+            android:textColor="@android:color/primary_text_dark"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/welcome_screen_title1"
+            android:id="@+id/textView4"
+            android:textColor="@android:color/primary_text_dark"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="71dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/welcome_screen_title2"
+            android:id="@+id/textView5"
+            android:textColor="@android:color/primary_text_dark"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_screen_class_name"
+            android:id="@+id/textView2"
+            android:textColor="@android:color/primary_text_dark"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/primary_text_dark"
+            android:text="@string/button_continue"
+            android:id="@+id/button"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="36dp"
+            android:onClick="continueClick"
+            android:layout_above="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"/>
+
+</RelativeLayout>

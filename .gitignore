@@ -1,0 +1,15 @@
+# BUILD
+/out
+/build
+/captures
+/local.properties
+
+# IDEA
+*.iml
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+
+# GRADLE
+.gradle
+/gradle

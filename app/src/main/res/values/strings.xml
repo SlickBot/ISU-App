@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="welocome">Dobrodošli</string>
+
+    <string name="welcome_screen_welcome">Dobrodošli!</string>
+    <string name="welcome_screen_title1">Življenski dogodek</string>
+    <string name="welcome_screen_title2">Ustanovitev podjetja</string>
+    <string name="welcome_screen_name">(Imena članov)</string>
+    <string name="welcome_screen_about">O nas</string>
+    <string name="welcome_screen_class_name">Informacijski sistemi v upravi ©</string>
+
+    <string name="button_continue">Nadaljuj</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+</resources>
