@@ -13,3 +13,6 @@
 # GRADLE
 .gradle
 /gradle
+.idea/modules/
+.idea/vcs.xml
+app/libs/
