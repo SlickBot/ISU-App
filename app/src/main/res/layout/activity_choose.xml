@@ -13,7 +13,7 @@
 
     <TextView
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/primary_text_dark"
+            android:textColor="@android:color/white"
             android:textSize="20sp"
             android:gravity="center"
             android:paddingTop="25dp"
@@ -45,7 +45,7 @@
 
     <Button
             android:text="@string/button_continue"
-            android:textColor="@android:color/primary_text_dark"
+            android:textColor="@android:color/white"
             android:background="@color/colorPrimary"
             android:onClick="continueClick"
             android:textSize="16sp"

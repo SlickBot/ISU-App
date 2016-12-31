@@ -5,28 +5,28 @@
     <string name="welcome_screen_welcome">Dobrodošli!</string>
     <string name="welcome_screen_title1">Življenski dogodek</string>
     <string name="welcome_screen_title2">Ustanovitev podjetja</string>
-    <string name="welcome_screen_name">(Imena članov)</string>
-    <string name="welcome_screen_about">O nas</string>
+    <string name="welcome_screen_names">(Imena članov)</string>
+    <string name="welcome_screen_about_us">O nas</string>
     <string name="welcome_screen_class_name">Informacijski sistemi v upravi ©</string>
 
     <string name="button_continue">Nadaljuj</string>
     <string name="share">Deli z drugimi</string>
     <string name="settings">Možnosti</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Odpri meni</string>
+    <string name="navigation_drawer_close">Zapri meni</string>
 
     <string name="faculty_name">Fakulteta za upravo</string>
 
     <string name="sp_full">Samostojni podjetnik</string>
-    <string name="sp">S. p.</string>
+    <string name="sp">s. p.</string>
 
     <string name="doo_full">Družba z omejeno odgovornostjo</string>
-    <string name="doo">D. o. o.</string>
+    <string name="doo">d. o. o.</string>
 
     <string name="dno_full">Družba z neomejeno odgovornostjo</string>
-    <string name="dno">D. n. o.</string>
+    <string name="dno">d. n. o.</string>
 
     <string name="dd_full">Delniška družba</string>
-    <string name="dd">D. d.</string>
+    <string name="dd">d. d.</string>
 </resources>

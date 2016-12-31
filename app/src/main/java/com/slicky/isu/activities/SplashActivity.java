@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import com.slicky.isu.ActivityUtils;
-import com.slicky.isu.activities.R;
+import com.slicky.isu.R;
 
 public class SplashActivity extends AppCompatActivity {
     private ActivityUtils utils = ActivityUtils.getInstance();

@@ -9,10 +9,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import com.slicky.isu.activities.R;
+import com.slicky.isu.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -81,19 +80,19 @@ public class MainActivity extends AppCompatActivity
         switch (id) {
             // TIP DRUŽBE
             case R.id.sp:
-                startSp();
+                spClick(null);
                 break;
 
             case R.id.doo:
-                startDoo();
+                dooClick(null);
                 break;
 
             case R.id.dno:
-                startDno();
+                dnoClick(null);
                 break;
 
             case R.id.dd:
-                startDd();
+                ddClick(null);
                 break;
 
             // OSTALO
@@ -107,36 +106,22 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
 
-
         return true;
     }
 
     public void spClick(View view) {
-        startSp();
+        start(R.raw.example_decision_tree);
     }
 
     public void dooClick(View view) {
-        startDoo();
+        start(R.raw.example_decision_tree);
     }
 
     public void dnoClick(View view) {
-        startDno();
+        start(R.raw.example_decision_tree);
     }
 
     public void ddClick(View view) {
-        startDd();
-    }
-
-    private void startSp() {
-        start(R.raw.example_decision_tree);
-    }
-    private void startDoo() {
-        start(R.raw.example_decision_tree);
-    }
-    private void startDno() {
-        start(R.raw.example_decision_tree);
-    }
-    private void startDd() {
         start(R.raw.example_decision_tree);
     }
 

@@ -1,5 +1,6 @@
 package com.slicky.decisiontree
 
+import org.dom4j.Document
 import org.dom4j.Element
 import org.dom4j.io.SAXReader
 import java.io.File
@@ -23,79 +24,108 @@ object DecisionTreeParser {
         val document = reader.read(inStream)
 
         // find root element
-        val rootElement = document.rootElement
-                ?: throw DecisionTreeException { "Could not find root element!" }
-        // root element has to be called "tree"
-        if (rootElement.name != "tree")
-            throw DecisionTreeException { "Root element is not named \"tree\"!" }
+        val rootElement = findRoot(document)
+        // find decisions
+        val decisions = findDecisions(rootElement)
+        // find actions
+        val actions = findActions(rootElement)
+        // find ends
+        val ends = findEnds(rootElement)
 
+        // return TreeData
+        return TreeData(decisions, actions, ends)
+    }
+
+    private fun findRoot(document: Document?): Element {
+        return document?.rootElement?.apply {
+            // root element has to be called "tree"
+            if (name != "tree")
+                throw DecisionTreeException { "Root element is not named \"tree\"!" }
+            // if root element is null throw exception
+        } ?: throw DecisionTreeException { "Could not find root element!" }
+    }
+
+    private fun findDecisions(root: Element): List<Decision> {
         // select decisions element
-        val decisionsElement = rootElement.element("decisions")
+        val decisionsElement = root.element("decisions")
                 ?: throw DecisionTreeException { "Could not find \"decisions\" element!" }
-        // select actions element
-        val actionsElement = rootElement.element("actions")
-                ?: throw DecisionTreeException { "Could not find \"actions\" element!" }
-        // select ends element
-        val endsElement = rootElement.element("ends")
-                ?: throw DecisionTreeException { "Could not find \"ends\" element!" }
 
         // select decision elements
         val decisionElements = decisionsElement.elements("decision").map { it as Element }
         if (decisionElements.isEmpty())
             throw DecisionTreeException { "Could not find any \"decision\" elements!" }
-        // select action elements
-        val actionElements = actionsElement.elements("action").map { it as Element }
-        if (actionElements.isEmpty())
-            throw DecisionTreeException { "Could not find any \"action\" elements!" }
-        // select end elements
-        val endElements = endsElement.elements("end").map { it as Element }
-        if (endElements.isEmpty())
-            throw DecisionTreeException { "Could not find any \"end\" elements!" }
 
-        // extract decisions from decision elements
-        val decisions = decisionElements.map { decisionElement ->
+        // extract and return decisions from decision elements
+        return decisionElements.map { decisionElement ->
+
             // select id attribute for decision
             val decisionID = decisionElement.attribute("id")?.value
                     ?: throw DecisionTreeException { "Decision has no \"id\" attribute!" }
+            // select text and trim it
+            val decisionText = (decisionElement.data as String).trim()
+
             // extract flag elements
             val flagElements = decisionElement.elements("flag") ?: emptyList<Element>()
             // extract text from flag elements
             val flags = flagElements.map { ((it as Element).data as String).trim() }
-            // select text and trim it
-            val decisionText = (decisionElement.data as String).trim()
+
             // extract answers from answer elements
-            val answers = decisionElement.elements("answer")
-                    // cast as Element
-                    .map { it as Element }
-                    .map { answerElement ->
-                        // select text and trim it
-                        val answerText = (answerElement.data as String).trim()
-                        // select action id from action attribute
-                        val actionID = answerElement.attribute("action").value
-                        // return Action
-                        Answer(answerText, actionID)
-                    }
+            val answers = findAnswers(decisionElement)
+
             // there should be at least one answer
             if (answers.isEmpty())
                 throw DecisionTreeException { "Decision has no \"answer\" elements!" }
+
             // return Decision
             Decision(decisionID, flags, decisionText, answers)
         }
+    }
 
-        // extract actions from action elements
-        val actions = actionElements.map { actionElement ->
+    private fun findAnswers(decisions: Element): List<Answer> {
+        return decisions.elements("answer")
+                // cast as Element
+                .map { it as Element }
+                .map { answerElement ->
+
+                    // select text and trim it
+                    val answerText = (answerElement.data as String).trim()
+
+                    // select action id from action attribute
+                    val actionID = answerElement.attribute("action").value
+
+                    // return Action
+                    Answer(answerText, actionID)
+                }
+    }
+
+    private fun findActions(root: Element): List<Action> {
+        // select actions element
+        val actionsElement = root.element("actions")
+                ?: throw DecisionTreeException { "Could not find \"actions\" element!" }
+
+        // select action elements
+        val actionElements = actionsElement.elements("action").map { it as Element }
+        if (actionElements.isEmpty())
+            throw DecisionTreeException { "Could not find any \"action\" elements!" }
+
+        // extract and return actions from action elements
+        return actionElements.map { actionElement ->
+
             // select id from action attribute
             val actionID = actionElement.attribute("id")?.value
                     ?: throw DecisionTreeException { "Action has no \"id\" attribute!" }
+
             // extract flag elements
             val flagElements = actionElement.elements("flag") ?: emptyList<Element>()
             // extract text from flag elements
             val flags = flagElements.map { ((it as Element).data as String).trim() }
+
             // select next element from action element
             val nextElement = actionElement.element("next")
                     ?: throw DecisionTreeException { "Action has no \"next\" elements!" }
             // select next attribute as decision
             var nextAttribute = nextElement.attribute("decision")
+
             if (nextAttribute != null) {
                 // next is decision, return decision Action
                 Action(actionID, flags, NextType.DECISION, nextAttribute.value)
@@ -103,23 +133,34 @@ object DecisionTreeParser {
                 // next is end, select next attribute as end
                 nextAttribute = nextElement.attribute("end")
                         ?: throw DecisionTreeException { "Next has no attribute is named \"decision\" or \"end\"!" }
+
                 // return end Action
                 Action(actionID, flags, NextType.END, nextAttribute.value)
             }
         }
+    }
 
-        // extract ends from end elements
-        val ends = endElements.map { endElement ->
+    private fun findEnds(root: Element): List<End> {
+        // select ends element
+        val endsElement = root.element("ends")
+                ?: throw DecisionTreeException { "Could not find \"ends\" element!" }
+
+        // select end elements
+        val endElements = endsElement.elements("end").map { it as Element }
+        if (endElements.isEmpty())
+            throw DecisionTreeException { "Could not find any \"end\" elements!" }
+
+        // extract and return ends from end elements
+        return endElements.map { endElement ->
+
             // select id from end elements
             val endID = endElement.attribute("id")?.value
                     ?: throw DecisionTreeException { "End has no \"id\" attribute!" }
             // select text and trim it
             val endText = (endElement.data as String).trim()
+
             // return End
             End(endID, endText)
         }
-
-        // return TreeData
-        return TreeData(decisions, actions, ends)
     }
 }

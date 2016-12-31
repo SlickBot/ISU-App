@@ -24,7 +24,7 @@ class Tester {
         with(data) {
 
             // init decision to root decision
-            var decision = rootDecision
+            var decision = findRootDecision()
             // init answers to root answers
             var answers = decision.answers
             // init should run

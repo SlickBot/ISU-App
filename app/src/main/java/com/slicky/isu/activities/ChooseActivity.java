@@ -1,5 +1,7 @@
 package com.slicky.isu.activities;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,6 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import com.slicky.decisiontree.*;
 import com.slicky.isu.ActivityUtils;
+import com.slicky.isu.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +27,8 @@ public class ChooseActivity extends AppCompatActivity {
 
     private ActivityUtils utils = ActivityUtils.getInstance();
     private DecisionTreeParser parser = DecisionTreeParser.INSTANCE;
+
+    private final Object lock = new Object();
 
     private TreeData data;
     private Decision currentDecision;
@@ -50,10 +55,10 @@ public class ChooseActivity extends AppCompatActivity {
         try {
             // get parsed decision tree data
             data = parser.parse(getResources().openRawResource(resourceID));
-            // set root decision as current
-            currentDecision = data.getRootDecision();
-
-            setDecision(currentDecision);
+            // find root decision
+            Decision root = data.findRootDecision();
+            // set root decision
+            setDecision(root);
 
         } catch (DecisionTreeException e) {
             Log.wtf(TAG, "Error while parsing data!", e);
@@ -96,31 +101,60 @@ public class ChooseActivity extends AppCompatActivity {
         }
     }
 
-    private void setDecision(Decision decision) {
-        // display question
-        tvQuestions.setText(decision.getText());
+    private void setDecision(final Decision decision) {
+        synchronized (lock) {
+            // display question
+            tvQuestions.setText(decision.getText());
 
-        // set decision as current
-        currentDecision = decision;
-        // save all flags from decision
-        flags.addAll(currentDecision.getFlags());
+            // set decision as current
+            currentDecision = decision;
+            // save all flags from decision
+            flags.addAll(currentDecision.getFlags());
 
-        // create new radio group
-        group = new RadioGroup(this);
-        // set radio gravity
-        group.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-        // remove old group
-        llAnswers.removeAllViews();
-        // add new group
-        llAnswers.addView(group);
+            llAnswers.animate()
+                    .xBy(1000.0f)
+                    .setDuration(500)
+                    .setListener(new AnimatorListenerAdapter() {
 
-        List<Answer> answers = decision.getAnswers();
-        // add new answers
-        for (int i = 0; i < answers.size(); i++) {
-            Answer answer = answers.get(i);
-            RadioButton answerButton = createAnswerButton(answer);
-            answerButton.setId(i);
-            group.addView(answerButton);
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+
+                            // create new radio group
+                            group = new RadioGroup(ChooseActivity.this);
+                            // set radio gravity
+                            group.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
+                            llAnswers.animate()
+                                    .xBy(-2000.0f)
+                                    .setDuration(0)
+                                    .setListener(new AnimatorListenerAdapter() {
+
+                                        @Override
+                                        public void onAnimationEnd(Animator animation) {
+
+                                            // remove old group
+                                            llAnswers.removeAllViews();
+                                            // add new group
+                                            llAnswers.addView(group);
+
+                                            List<Answer> answers = decision.getAnswers();
+                                            // add new answers
+                                            for (int i = 0; i < answers.size(); i++) {
+                                                Answer answer = answers.get(i);
+                                                RadioButton answerButton = createAnswerButton(answer);
+                                                answerButton.setId(i);
+                                                group.addView(answerButton);
+                                            }
+
+                                            llAnswers.animate()
+                                                    .xBy(1000.0f)
+                                                    .setDuration(500)
+                                                    .setListener(null);
+                                        }
+                                    });
+
+                        }
+                    });
+
         }
     }
 
