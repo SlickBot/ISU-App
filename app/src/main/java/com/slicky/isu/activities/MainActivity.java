@@ -1,4 +1,4 @@
-package isu.test.slicky.com.testapp;
+package com.slicky.isu.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import com.slicky.isu.activities.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -49,27 +51,27 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -79,15 +81,19 @@ public class MainActivity extends AppCompatActivity
         switch (id) {
             // TIP DRUŽBE
             case R.id.sp:
+                startSp();
                 break;
 
             case R.id.doo:
+                startDoo();
                 break;
 
             case R.id.dno:
+                startDno();
                 break;
 
             case R.id.dd:
+                startDd();
                 break;
 
             // OSTALO
@@ -101,10 +107,42 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
 
-        Intent intent = new Intent(this, ChooseActivity.class);
-        intent.putExtra("type", "sp");
-        startActivity(intent);
 
         return true;
+    }
+
+    public void spClick(View view) {
+        startSp();
+    }
+
+    public void dooClick(View view) {
+        startDoo();
+    }
+
+    public void dnoClick(View view) {
+        startDno();
+    }
+
+    public void ddClick(View view) {
+        startDd();
+    }
+
+    private void startSp() {
+        start(R.raw.example_decision_tree);
+    }
+    private void startDoo() {
+        start(R.raw.example_decision_tree);
+    }
+    private void startDno() {
+        start(R.raw.example_decision_tree);
+    }
+    private void startDd() {
+        start(R.raw.example_decision_tree);
+    }
+
+    private void start(int resourceID) {
+        Intent intent = new Intent(this, ChooseActivity.class);
+        intent.putExtra("resource_id", resourceID);
+        startActivity(intent);
     }
 }

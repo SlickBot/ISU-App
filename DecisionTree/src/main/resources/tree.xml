@@ -1,0 +1,87 @@
+<tree>
+    <decisions>
+
+        <decision id="START">
+            Is world round?
+            <answer action="2">
+                No
+            </answer>
+            <answer action="1">
+                Yes
+            </answer>
+        </decision>
+
+        <decision id="1">
+            Are you sure?
+            <answer action="3">
+                Yes
+            </answer>
+            <answer action="4">
+                No
+            </answer>
+            <flag>
+                failFlag
+            </flag>
+        </decision>
+
+        <decision id="2">
+            One, two or three?
+            <answer action="5">
+                One
+            </answer>
+            <answer action="6">
+                Two
+            </answer>
+            <answer action="7">
+                Three
+            </answer>
+        </decision>
+
+    </decisions>
+    <actions>
+
+        <action id="1">
+            <next decision="2"/>
+        </action>
+
+        <action id="2">
+            <next decision="1"/>
+        </action>
+
+        <action id="3">
+            <next decision="1"/>
+        </action>
+
+        <action id="4">
+            <next decision="START"/>
+        </action>
+
+        <action id="5">
+            <next end="1"/>
+        </action>
+
+        <action id="6">
+            <next end="2"/>
+        </action>
+
+        <action id="7">
+            <next end="3"/>
+        </action>
+
+    </actions>
+    <ends>
+
+        <end id="1">
+            Good job!
+        </end>
+
+        <end id="2">
+            You did fine.
+        </end>
+
+        <end id="3">
+            You really sucked..
+        </end>
+
+    </ends>
+</tree>

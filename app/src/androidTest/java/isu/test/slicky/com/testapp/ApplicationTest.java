@@ -3,6 +3,7 @@ package isu.test.slicky.com.testapp;
 import android.content.Intent;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import com.slicky.isu.activities.MainActivity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 

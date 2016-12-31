@@ -9,67 +9,51 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:background="@color/colorPrimaryDark"
-        tools:context="isu.test.slicky.com.testapp.ChooseActivity">
+        tools:context="com.slicky.isu.activities.ChooseActivity">
 
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@android:color/primary_text_dark"
-            android:text="Zelo pomembno vprašanje?"
-            android:id="@+id/textView"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"/>
+            android:id="@+id/tvQuestion"/>
 
-    <CheckBox
-            android:layout_width="wrap_content"
+    <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/primary_text_dark"
-            android:text="Odgovor 1"
-            android:id="@+id/checkBox1"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="75dp"/>
-
-    <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/primary_text_dark"
-            android:text="Odgovor 2"
-            android:id="@+id/checkBox2"
-            android:layout_below="@+id/checkBox1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
-
-    <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/primary_text_dark"
-            android:text="Odgovor 3"
-            android:id="@+id/checkBox3"
-            android:layout_below="@+id/checkBox2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
-
-    <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/primary_text_dark"
-            android:text="Odgovor 4"
-            android:id="@+id/checkBox4"
-            android:layout_below="@+id/checkBox3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
+            android:layout_below="@+id/tvQuestion"
+            android:layout_above="@+id/bContinue"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:layout_centerVertical="true"
+            android:fadeScrollbars="false"
+            android:fillViewport="true">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/llAnswers">
+        </LinearLayout>
+    </ScrollView>
 
     <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/primary_text_dark"
             android:text="@string/button_continue"
-            android:id="@+id/button"
+            android:textColor="@android:color/primary_text_dark"
             android:background="@color/colorPrimary"
+            android:onClick="continueClick"
+            android:textSize="16sp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"/>
+            android:id="@+id/bContinue"/>
+
 </RelativeLayout>

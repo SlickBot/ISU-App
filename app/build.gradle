@@ -10,7 +10,7 @@ android {
     buildToolsVersion androidBuildVersion
 
     defaultConfig {
-        applicationId "isu.test.slicky.com.testapp"
+        applicationId "com.slicky.isu"
         minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
@@ -40,4 +40,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$androidVersion"
     compile "com.android.support:support-v4:$androidVersion"
     compile "com.android.support:design:$androidVersion"
+
+//    compile "org.sfl4j:slf4j-api:1.7.22"
+    compile project(path: ':DecisionTree')
 }

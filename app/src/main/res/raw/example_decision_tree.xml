@@ -1,0 +1,65 @@
+<tree>
+    <decisions>
+
+        <decision id="START">
+            Has use-by date passed?
+            <answer action="action_not_spoiled">
+                No
+            </answer>
+            <answer action="action_more_than">
+                Yes
+            </answer>
+        </decision>
+
+        <decision id="decision_more_than">
+            Was the use-by date more than 3 days ago?
+            <answer action="action_not_spoiled">
+                No
+            </answer>
+            <answer action="action_smell_funny">
+                Yes
+            </answer>
+        </decision>
+
+        <decision id="decision_smell_funny">
+            Does it smell funny?
+            <answer action="action_not_spoiled">
+                No
+            </answer>
+            <answer action="action_spoiled">
+                Yes
+            </answer>
+        </decision>
+
+    </decisions>
+    <actions>
+
+        <action id="action_more_than">
+            <next decision="decision_more_than"/>
+        </action>
+
+        <action id="action_smell_funny">
+            <next decision="decision_smell_funny"/>
+        </action>
+
+        <action id="action_spoiled">
+            <next end="end_spoiled"/>
+        </action>
+
+        <action id="action_not_spoiled">
+            <next end="end_not_spoiled"/>
+        </action>
+
+    </actions>
+    <ends>
+
+        <end id="end_spoiled">
+            Your food has gone bad..
+        </end>
+
+        <end id="end_not_spoiled">
+            Your food is still fresh!
+        </end>
+    </ends>
+
+</tree>

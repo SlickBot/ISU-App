@@ -1,0 +1,73 @@
+<tree>
+    <decisions>
+
+        <decision id="START">
+            Is it moving?
+            <answer action="action_not_moving_should">
+                No
+            </answer>
+            <answer action="action_moving_should">
+                Yes
+            </answer>
+        </decision>
+
+        <decision id="decision_not_moving_should">
+            Should it move?
+            <answer action="action_ok">
+                No
+            </answer>
+            <answer action="action_use_wd40">
+                Yes
+            </answer>
+        </decision>
+
+        <decision id="decision_moving_should">
+            Should it move?
+            <answer action="action_use_tape">
+                No
+            </answer>
+            <answer action="action_ok">
+                Yes
+            </answer>
+        </decision>
+
+    </decisions>
+    <actions>
+
+        <action id="action_not_moving_should">
+            <next decision="decision_not_moving_should"/>
+        </action>
+
+        <action id="action_moving_should">
+            <next decision="decision_moving_should"/>
+        </action>
+
+        <action id="action_ok">
+            <next end="end_ok"/>
+        </action>
+
+        <action id="action_use_wd40">
+            <next end="end_wd40"/>
+        </action>
+
+        <action id="action_use_tape">
+            <next end="end_tape"/>
+        </action>
+
+    </actions>
+    <ends>
+
+        <end id="end_ok">
+            It's all right then!
+        </end>
+
+        <end id="end_wd40">
+            Use WD40!
+        </end>
+
+        <end id="end_tape">
+            Use duct tape!
+        </end>
+
+    </ends>
+</tree>

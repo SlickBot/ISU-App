@@ -1,6 +1,6 @@
 # BUILD
 /out
-/build
+*/build
 /captures
 /local.properties
 app/libs/
@@ -12,3 +12,6 @@ app/libs/
 # GRADLE
 .gradle
 /gradle
+gen/
+
+DecisionTree/DecisionTree.iml
