@@ -29,4 +29,5 @@
 
     <string name="dd_full">Delniška družba</string>
     <string name="dd">d. d.</string>
+    <string name="choose_must_be_selected">Izbrati morate točno en odgovor!</string>
 </resources>

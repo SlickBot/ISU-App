@@ -2,10 +2,13 @@ package com.slicky.isu.activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.app.Notification;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -27,8 +30,6 @@ public class ChooseActivity extends AppCompatActivity {
 
     private ActivityUtils utils = ActivityUtils.getInstance();
     private DecisionTreeParser parser = DecisionTreeParser.INSTANCE;
-
-    private final Object lock = new Object();
 
     private TreeData data;
     private Decision currentDecision;
@@ -68,8 +69,10 @@ public class ChooseActivity extends AppCompatActivity {
 
     public void continueClick(View view) {
         int checked = group.getCheckedRadioButtonId();
-        if (checked == -1)
+        if (checked == -1) {
+            displaySelectionNotification();
             return;
+        }
 
         try {
             Answer selectedAnswer = currentDecision.getAnswers().get(checked);
@@ -101,61 +104,71 @@ public class ChooseActivity extends AppCompatActivity {
         }
     }
 
+    private void displaySelectionNotification() {
+        Snackbar snackbar = Snackbar.make(
+                llAnswers,
+                R.string.choose_must_be_selected,
+                Snackbar.LENGTH_SHORT
+        );
+        View view = snackbar.getView();
+        TextView tv = (TextView) view.findViewById(android.support.design.R.id.snackbar_text);
+        tv.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark));
+        tv.setGravity(Gravity.CENTER_HORIZONTAL);
+        snackbar.show();
+    }
+
     private void setDecision(final Decision decision) {
-        synchronized (lock) {
-            // display question
-            tvQuestions.setText(decision.getText());
+        // display question
+        tvQuestions.setText(decision.getText());
 
-            // set decision as current
-            currentDecision = decision;
-            // save all flags from decision
-            flags.addAll(currentDecision.getFlags());
+        // set decision as current
+        currentDecision = decision;
+        // save all flags from decision
+        flags.addAll(currentDecision.getFlags());
 
-            llAnswers.animate()
-                    .xBy(1000.0f)
-                    .setDuration(500)
-                    .setListener(new AnimatorListenerAdapter() {
+        llAnswers.animate()
+                .xBy(1000.0f)
+                .setDuration(500)
+                .setListener(new AnimatorListenerAdapter() {
 
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
 
-                            // create new radio group
-                            group = new RadioGroup(ChooseActivity.this);
-                            // set radio gravity
-                            group.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-                            llAnswers.animate()
-                                    .xBy(-2000.0f)
-                                    .setDuration(0)
-                                    .setListener(new AnimatorListenerAdapter() {
+                        // create new radio group
+                        group = new RadioGroup(ChooseActivity.this);
+                        // set radio gravity
+                        group.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
+                        llAnswers.animate()
+                                .xBy(-2000.0f)
+                                .setDuration(0)
+                                .setListener(new AnimatorListenerAdapter() {
 
-                                        @Override
-                                        public void onAnimationEnd(Animator animation) {
+                                    @Override
+                                    public void onAnimationEnd(Animator animation) {
 
-                                            // remove old group
-                                            llAnswers.removeAllViews();
-                                            // add new group
-                                            llAnswers.addView(group);
+                                        // remove old group
+                                        llAnswers.removeAllViews();
+                                        // add new group
+                                        llAnswers.addView(group);
 
-                                            List<Answer> answers = decision.getAnswers();
-                                            // add new answers
-                                            for (int i = 0; i < answers.size(); i++) {
-                                                Answer answer = answers.get(i);
-                                                RadioButton answerButton = createAnswerButton(answer);
-                                                answerButton.setId(i);
-                                                group.addView(answerButton);
-                                            }
-
-                                            llAnswers.animate()
-                                                    .xBy(1000.0f)
-                                                    .setDuration(500)
-                                                    .setListener(null);
+                                        List<Answer> answers = decision.getAnswers();
+                                        // add new answers
+                                        for (int i = 0; i < answers.size(); i++) {
+                                            Answer answer = answers.get(i);
+                                            RadioButton answerButton = createAnswerButton(answer);
+                                            answerButton.setId(i);
+                                            group.addView(answerButton);
                                         }
-                                    });
 
-                        }
-                    });
+                                        llAnswers.animate()
+                                                .xBy(1000.0f)
+                                                .setDuration(500)
+                                                .setListener(null);
+                                    }
+                                });
 
-        }
+                    }
+                });
     }
 
     private RadioButton createAnswerButton(Answer answer) {
