@@ -114,6 +114,7 @@ public class ChooseActivity extends AppCompatActivity {
         TextView tv = (TextView) view.findViewById(android.support.design.R.id.snackbar_text);
         tv.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark));
         tv.setGravity(Gravity.CENTER_HORIZONTAL);
+        tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         snackbar.show();
     }
 
