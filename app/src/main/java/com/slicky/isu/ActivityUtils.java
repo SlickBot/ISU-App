@@ -14,7 +14,7 @@ public class ActivityUtils {
         return instance;
     }
 
-    private ActivityUtils() {}
+    private ActivityUtils() { }
 
     public void removeActionBar(AppCompatActivity activity) {
         ActionBar bar = activity.getSupportActionBar();

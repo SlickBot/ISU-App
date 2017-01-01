@@ -2,14 +2,15 @@ group 'com.slicky.decisiontree'
 
 buildscript {
     ext {
-        kotlin_version = '1.0.6'
+        kotlinVersion = "1.0.6"
+        jdomVersion = "20040902.021138"
     }
 
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 }
 
@@ -20,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
-    compile "dom4j:dom4j:20040902.021138"
+    compile "dom4j:dom4j:$jdomVersion"
 }

@@ -3,6 +3,8 @@ apply plugin: 'com.android.application'
 ext {
     androidVersion = "25.0.1"
     androidBuildVersion = "25.0.0"
+    androidTestVersion = "0.5"
+    junitVersion = "4.12"
 }
 
 android {
@@ -11,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.slicky.isu"
-        minSdkVersion 23
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -29,18 +31,17 @@ android {
 
 dependencies {
     // jars
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
     // android test
     androidTestCompile "com.android.support:support-annotations:$androidVersion"
-    androidTestCompile 'com.android.support.test:runner:0.5'
-    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile "com.android.support.test:runner:$androidTestVersion"
+    androidTestCompile "com.android.support.test:rules:$androidTestVersion"
     // test
-    testCompile 'junit:junit:4.12'
+    testCompile "junit:junit:$junitVersion"
     // libs
     compile "com.android.support:appcompat-v7:$androidVersion"
     compile "com.android.support:support-v4:$androidVersion"
     compile "com.android.support:design:$androidVersion"
-
-//    compile "org.sfl4j:slf4j-api:1.7.22"
+    // local projects
     compile project(path: ':DecisionTree')
 }

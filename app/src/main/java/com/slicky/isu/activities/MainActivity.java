@@ -80,26 +80,24 @@ public class MainActivity extends AppCompatActivity
         switch (id) {
             // TIP DRUŽBE
             case R.id.sp:
-                spClick(null);
+                startDetails(R.string.sp);
                 break;
-
             case R.id.doo:
-                dooClick(null);
+                startDetails(R.string.doo);
                 break;
-
             case R.id.dno:
-                dnoClick(null);
+                startDetails(R.string.dno);
                 break;
-
             case R.id.dd:
-                ddClick(null);
+                startDetails(R.string.dd);
                 break;
 
             // OSTALO
             case R.id.share:
                 break;
 
-            case R.id.tools:
+            case R.id.about:
+                startAbout();
                 break;
         }
 
@@ -109,25 +107,36 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void spClick(View view) {
-        start(R.raw.example_decision_tree);
-    }
-
-    public void dooClick(View view) {
-        start(R.raw.example_decision_tree);
-    }
-
-    public void dnoClick(View view) {
-        start(R.raw.example_decision_tree);
-    }
-
-    public void ddClick(View view) {
-        start(R.raw.example_decision_tree);
-    }
-
-    private void start(int resourceID) {
+    private void startQuestions(int resourceID) {
         Intent intent = new Intent(this, ChooseActivity.class);
         intent.putExtra("resource_id", resourceID);
         startActivity(intent);
+    }
+
+    private void startDetails(int typeID) {
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra("type_id", typeID);
+        startActivity(intent);
+    }
+
+    private void startAbout() {
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
+    }
+
+    public void spClick(View view) {
+        startQuestions(R.raw.example_decision_tree);
+    }
+
+    public void dooClick(View view) {
+        startQuestions(R.raw.example_decision_tree);
+    }
+
+    public void dnoClick(View view) {
+        startQuestions(R.raw.example_decision_tree);
+    }
+
+    public void ddClick(View view) {
+        startQuestions(R.raw.example_decision_tree);
     }
 }

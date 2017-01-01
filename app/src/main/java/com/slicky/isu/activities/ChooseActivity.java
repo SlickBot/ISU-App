@@ -2,10 +2,10 @@ package com.slicky.isu.activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.app.Notification;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
@@ -114,7 +114,8 @@ public class ChooseActivity extends AppCompatActivity {
         TextView tv = (TextView) view.findViewById(android.support.design.R.id.snackbar_text);
         tv.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark));
         tv.setGravity(Gravity.CENTER_HORIZONTAL);
-        tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
+            tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         snackbar.show();
     }
 
