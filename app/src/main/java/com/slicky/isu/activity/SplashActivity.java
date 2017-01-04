@@ -1,4 +1,4 @@
-package com.slicky.isu.activities;
+package com.slicky.isu.activity;
 
 import android.content.Intent;
 import android.os.Bundle;

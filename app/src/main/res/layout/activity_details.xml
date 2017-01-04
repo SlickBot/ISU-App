@@ -10,13 +10,15 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:background="@color/colorPrimaryDark"
-        tools:context="com.slicky.isu.activities.DetailsActivity">
+        tools:context="com.slicky.isu.activity.DetailsActivity">
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:id="@+id/tvDetails"/>
 
 </RelativeLayout>
