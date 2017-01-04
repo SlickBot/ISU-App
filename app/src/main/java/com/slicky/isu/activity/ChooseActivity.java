@@ -1,7 +1,5 @@
 package com.slicky.isu.activity;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -156,17 +154,14 @@ public class ChooseActivity extends AppCompatActivity {
         tvQuestions.animate()
             .alpha(1.0f)
             .setDuration(1000)
-            .setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
+            .setListener(null);
 
-                    // display answers
-                    llAnswers.animate()
-                        .alpha(1.0f)
-                        .setDuration(1000)
-                        .setListener(null);
-                }
-            });
+        // display answers
+        llAnswers.animate()
+                .alpha(1.0f)
+                .setDuration(1000)
+                .setStartDelay(1000)
+                .setListener(null);
     }
 
     private RadioButton createAnswerButton(Answer answer) {
