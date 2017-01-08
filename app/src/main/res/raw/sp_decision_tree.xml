@@ -158,7 +158,7 @@
             <more>na E-VEM lahko oddate prijavo v davčni register, ali pa to storite v 8 dneh
                 od dneva vpisa v PRS
             </more>
-            Ste že oddali prijavo v davčni register?
+            Ste že oddali prijavo v davčni register??
             <answer action="sp_spletno_konec">
                 Da
             </answer>
