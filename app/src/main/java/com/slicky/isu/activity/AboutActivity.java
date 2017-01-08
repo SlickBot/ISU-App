@@ -1,4 +1,4 @@
-package com.slicky.isu.activities;
+package com.slicky.isu.activity;
 
 import android.content.res.Resources;
 import android.support.v7.app.ActionBar;
@@ -25,9 +25,8 @@ public class AboutActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
+        if (item.getItemId() == android.R.id.home)
             this.finish();
-        }
         return true;
     }
 }

@@ -1,7 +1,5 @@
-package com.slicky.isu.activities;
+package com.slicky.isu.activity;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -128,49 +126,42 @@ public class ChooseActivity extends AppCompatActivity {
         // save all flags from decision
         flags.addAll(currentDecision.getFlags());
 
+        // hide answers
+        llAnswers.setAlpha(0);
+        // hide questions
+        tvQuestions.setAlpha(0);
+
+        // create new radio group
+        group = new RadioGroup(ChooseActivity.this);
+        // set radio gravity
+        group.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
+
+        // remove old group
+        llAnswers.removeAllViews();
+        // add new group
+        llAnswers.addView(group);
+
+        List<Answer> answers = decision.getAnswers();
+        // add new answers
+        for (int i = 0; i < answers.size(); i++) {
+            Answer answer = answers.get(i);
+            RadioButton answerButton = createAnswerButton(answer);
+            answerButton.setId(i);
+            group.addView(answerButton);
+        }
+
+        // display questions
+        tvQuestions.animate()
+            .alpha(1.0f)
+            .setDuration(1000)
+            .setListener(null);
+
+        // display answers
         llAnswers.animate()
-                .xBy(1000.0f)
-                .setDuration(500)
-                .setListener(new AnimatorListenerAdapter() {
-
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-
-                        // create new radio group
-                        group = new RadioGroup(ChooseActivity.this);
-                        // set radio gravity
-                        group.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-                        llAnswers.animate()
-                                .xBy(-2000.0f)
-                                .setDuration(0)
-                                .setListener(new AnimatorListenerAdapter() {
-
-                                    @Override
-                                    public void onAnimationEnd(Animator animation) {
-
-                                        // remove old group
-                                        llAnswers.removeAllViews();
-                                        // add new group
-                                        llAnswers.addView(group);
-
-                                        List<Answer> answers = decision.getAnswers();
-                                        // add new answers
-                                        for (int i = 0; i < answers.size(); i++) {
-                                            Answer answer = answers.get(i);
-                                            RadioButton answerButton = createAnswerButton(answer);
-                                            answerButton.setId(i);
-                                            group.addView(answerButton);
-                                        }
-
-                                        llAnswers.animate()
-                                                .xBy(1000.0f)
-                                                .setDuration(500)
-                                                .setListener(null);
-                                    }
-                                });
-
-                    }
-                });
+                .alpha(1.0f)
+                .setDuration(1000)
+                .setStartDelay(1000)
+                .setListener(null);
     }
 
     private RadioButton createAnswerButton(Answer answer) {

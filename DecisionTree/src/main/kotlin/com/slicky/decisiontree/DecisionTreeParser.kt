@@ -51,12 +51,14 @@ object DecisionTreeParser {
                 ?: throw DecisionTreeException { "Could not find \"decisions\" element!" }
 
         // select decision elements
-        val decisionElements = decisionsElement.elements("decision").map { it as Element }
+        val decisionElements = decisionsElement.elements("decision")
         if (decisionElements.isEmpty())
             throw DecisionTreeException { "Could not find any \"decision\" elements!" }
 
         // extract and return decisions from decision elements
-        return decisionElements.map { decisionElement ->
+        return decisionElements.map { decision ->
+            // cast to Element
+            val decisionElement = decision as Element
 
             // select id attribute for decision
             val decisionID = decisionElement.attribute("id")?.value
@@ -83,9 +85,9 @@ object DecisionTreeParser {
 
     private fun findAnswers(decisions: Element): List<Answer> {
         return decisions.elements("answer")
-                // cast as Element
-                .map { it as Element }
-                .map { answerElement ->
+                .map { answer ->
+                    // cast to Element
+                    val answerElement = answer as Element
 
                     // select text and trim it
                     val answerText = (answerElement.data as String).trim()
@@ -104,12 +106,14 @@ object DecisionTreeParser {
                 ?: throw DecisionTreeException { "Could not find \"actions\" element!" }
 
         // select action elements
-        val actionElements = actionsElement.elements("action").map { it as Element }
+        val actionElements = actionsElement.elements("action")
         if (actionElements.isEmpty())
             throw DecisionTreeException { "Could not find any \"action\" elements!" }
 
         // extract and return actions from action elements
-        return actionElements.map { actionElement ->
+        return actionElements.map { action ->
+            // cast to Element
+            val actionElement = action as Element
 
             // select id from action attribute
             val actionID = actionElement.attribute("id")?.value
@@ -146,12 +150,14 @@ object DecisionTreeParser {
                 ?: throw DecisionTreeException { "Could not find \"ends\" element!" }
 
         // select end elements
-        val endElements = endsElement.elements("end").map { it as Element }
+        val endElements = endsElement.elements("end")
         if (endElements.isEmpty())
             throw DecisionTreeException { "Could not find any \"end\" elements!" }
 
         // extract and return ends from end elements
-        return endElements.map { endElement ->
+        return endElements.map { end ->
+            // cast to Element
+            val endElement = end as Element
 
             // select id from end elements
             val endID = endElement.attribute("id")?.value

@@ -12,13 +12,14 @@
               android:gravity="bottom">
 
     <ImageView
+            android:src="@drawable/index"
+            android:contentDescription="@string/faculty_name"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:src="@drawable/index"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/imageView"
-            android:contentDescription="@string/faculty_name"/>
+            android:onClick="toggleNotification"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:id="@+id/imageView"/>
 
     <TextView
             android:layout_width="wrap_content"

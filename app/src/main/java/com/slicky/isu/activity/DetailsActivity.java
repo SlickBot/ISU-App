@@ -1,4 +1,4 @@
-package com.slicky.isu.activities;
+package com.slicky.isu.activity;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -34,9 +34,8 @@ public class DetailsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
+        if (item.getItemId() == android.R.id.home)
             this.finish();
-        }
         return true;
     }
 
@@ -50,17 +49,18 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void initText(int typeID) {
         switch (typeID) {
-            case R.id.sp:
-//                tvDetails.setText(R.string.sp_details);
-                return;
-            case R.id.doo:
-//                tvDetails.setText(R.string.doo_details);
-                return;
-            case R.id.dno:
-//                tvDetails.setText(R.string.dno_details);
-                return;
-            case R.id.dd:
-//                tvDetails.setText(R.string.dd_details);
+            case R.string.sp:
+                tvDetails.setText(R.string.sp_full);
+                break;
+            case R.string.doo:
+                tvDetails.setText(R.string.doo_full);
+                break;
+            case R.string.dno:
+                tvDetails.setText(R.string.dno_full);
+                break;
+            case R.string.dd:
+                tvDetails.setText(R.string.dd_full);
+                break;
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.slicky.isu.activities;
+package com.slicky.isu.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +12,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import com.slicky.isu.R;
+import com.slicky.isu.service.MyService;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private boolean shouldShowNotification = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,5 +140,16 @@ public class MainActivity extends AppCompatActivity
 
     public void ddClick(View view) {
         startQuestions(R.raw.example_decision_tree);
+    }
+
+    public void toggleNotification(View view) {
+        Intent intent = new Intent(this, MyService.class);
+        if (shouldShowNotification) {
+            stopService(intent);
+            shouldShowNotification = false;
+        } else {
+            startService(intent);
+            shouldShowNotification = true;
+        }
     }
 }

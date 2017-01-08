@@ -1,4 +1,4 @@
-package com.slicky.isu.activities;
+package com.slicky.isu.activity;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
@@ -34,17 +34,16 @@ public class EndActivity extends AppCompatActivity {
         Object[] flags = (Object[]) extras.get("flags");
 
         tv.setText(end.getText() /*+ "\nYou failed " + flags.length + " times!"*/);
-        for (Object o : flags) {
-            String flag = (String) o;
-            System.out.println(flag);
-        }
+//        for (Object o : flags) {
+//            String flag = (String) o;
+//            System.out.println(flag);
+//        }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
+        if (item.getItemId() == android.R.id.home)
             this.finish();
-        }
         return true;
     }
 }

@@ -10,11 +10,11 @@ import android.view.WindowManager;
 public class ActivityUtils {
     private static ActivityUtils instance = new ActivityUtils();
 
+    private ActivityUtils() { }
+
     public static ActivityUtils getInstance() {
         return instance;
     }
-
-    private ActivityUtils() { }
 
     public void removeActionBar(AppCompatActivity activity) {
         ActionBar bar = activity.getSupportActionBar();
