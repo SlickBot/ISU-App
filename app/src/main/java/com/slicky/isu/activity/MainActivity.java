@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void spClick(View view) {
-        startQuestions(R.raw.example_decision_tree);
+        startQuestions(R.raw.sp_decision_tree);
     }
 
     public void dooClick(View view) {
