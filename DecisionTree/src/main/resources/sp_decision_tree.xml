@@ -1,0 +1,165 @@
+<tree>
+    <decisions>
+
+        <decision id="START">
+            Želite ustanoviti polni ali popoldanski sp?
+            <answer action="sp_lokacija">
+                Polni
+            </answer>
+            <answer action="sp_lokacija">
+                Popoldanski
+            </answer>
+        </decision>
+
+        <decision id="sp_lokacija">
+            Kje želite registrirati vaš sp?
+            <answer action="sp_spletno_1">
+                Na spletu (e-VEM)
+            </answer>
+            <answer action="sp_fizicno">
+                Fizično, na eni od točk VEM
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_1">
+            Imate digitalno potrdilo?
+            <answer action="sp_spletno_2">
+                Da
+            </answer>
+            <answer action="sp_spletno_2">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_2">
+            Imate zahtevano opremo?
+            <answer action="sp_spletno_3">
+                Da
+            </answer>
+            <answer action="sp_spletno_3">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_3">
+            Ste že izbrali primerno ime podjetja? (ime podjetja mora biti v slovenskem jeziku, lahko tudi v latinskem jeziku, ne sme vsebovati črk, ki noso v slovenski abecedi in jasno se mora razlikovati od imen firm, ki so že vpisana v ragistru podjetij AJPES)
+            <answer action="sp_spletno_4">
+                Da
+            </answer>
+            <answer action="sp_spletno_4">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_4">
+            Ste določili sedež podjetja? (sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov)
+            <answer action="sp_spletno_5">
+                Da
+            </answer>
+            <answer action="sp_spletno_5">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_5">
+            Imate izbrane kontaktne podatke?
+            <answer action="sp_spletno_6">
+                Da
+            </answer>
+            <answer action="sp_spletno_6">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_6">
+            Imate soglasje lastnika prostorov, kjer želite imeti poslovni naslov?
+            <answer action="sp_spletno_7">
+                Da
+            </answer>
+            <answer action="sp_spletno_7">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_7">
+            Ste določili dejavnost podjetja?
+            <answer action="sp_spletno_8">
+                Da
+            </answer>
+            <answer action="sp_spletno_8">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_8">
+            Ali vaša dejavnost potrebuje dovoljenje za opravljanje dejavnosti?
+            <answer action="sp_spletno_9">
+                Da
+            </answer>
+            <answer action="sp_spletno_9">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_9">
+            Želite dodati zastopnika za svoj sp?
+            <answer action="sp_spletno_10">
+                Da
+            </answer>
+            <answer action="sp_spletno_10">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_10">
+            Ste že oddali prijavo v davčni register?
+            <answer action="sp_spletno_11">
+                Da
+            </answer>
+            <answer action="sp_spletno_11">
+                Ne
+            </answer>
+        </decision>
+
+        <decision id="sp_davcni_register">
+            Ste že oddali prijavo v davčni register?
+            <answer action="sp_ze_v_davcnem_registru">
+                Da
+            </answer>
+            <answer action="sp_se_ne_v_davncem_registru">
+                Ne
+            </answer>
+        </decision>
+
+    </decisions>
+    <actions>
+
+        <action id="sp_lokacija">
+            <next decision="sp_lokacija"/>
+        </action>
+
+        <action id="sp_spletno_1">
+            <next decision="sp_spletno_1"/>
+        </action>
+
+        <action id="sp_fizicno">
+            <next end="fizicni_kontakt"/>
+        </action>
+
+        <action id="sp_ze_v_davcnem_registru">
+            <next end="end_not_spoiled"/>
+        </action>
+
+    </actions>
+    <ends>
+
+        <end id="fizicni_kontakt">
+            Pridite na eno izmed točk VEM in uredite ustanovitev sp! Potrebujete le osebni dokument in svojo davčno številko!
+        </end>
+
+        <end id="sp_ze_v_davcnem_registru">
+            Odprtje poslovnega računa!
+        </end>
+    </ends>
+
+</tree>
