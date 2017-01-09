@@ -2,9 +2,13 @@ package com.slicky.decisiontree
 
 import org.dom4j.Document
 import org.dom4j.Element
+import org.dom4j.Node
+import org.dom4j.Text
 import org.dom4j.io.SAXReader
 import java.io.File
 import java.io.InputStream
+import org.w3c.dom.ls.DOMImplementationLS
+
 
 /**
  * Created by slicky on 30.12.2016
@@ -69,8 +73,7 @@ object DecisionTreeParser {
             // extract more element
             val moreElement = decisionElement.element("more")
             // extract text from more element
-            val data = moreElement?.data
-            val moreText = if (data != null) (data as String).trim() else null
+            val moreText = getContent(moreElement)?.trim()
 
             // extract flag elements
             val flagElements = decisionElement.elements("flag") ?: emptyList<Element>()
@@ -106,8 +109,7 @@ object DecisionTreeParser {
                     // extract more element
                     val moreElement = answerElement.element("more")
                     // extract text from more element
-                    val data = moreElement?.data
-                    val moreText = if (data != null) (data as String).trim() else null
+                    val moreText = getContent(moreElement)?.trim()
 
                     // select action id from action attribute
                     val actionID = answerElement.attribute("action").value
@@ -185,5 +187,23 @@ object DecisionTreeParser {
             // return End
             End(endID, endText)
         }
+    }
+
+    private fun getContent(element: Element?): String? {
+//        return buildString {
+//            element?.elementIterator()?.forEach {
+//                append((it as Element).asXML())
+//            }
+//            element?.data?.let {
+//                append(it as String)
+//            }
+//        }
+        return element?.content()?.map {
+            when (it) {
+                is Text -> it.text.trim()
+                is Element -> it.asXML()
+                else -> null
+            }
+        }?.filter { !it.isNullOrEmpty() }?.joinToString("\n")
     }
 }

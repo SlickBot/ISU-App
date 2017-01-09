@@ -1,17 +1,21 @@
 package com.slicky.isu.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.MenuItem;
 import android.widget.TextView;
 import com.slicky.decisiontree.End;
+import com.slicky.isu.ActivityUtils;
 import com.slicky.isu.R;
 
 public class EndActivity extends AppCompatActivity {
 
-    private TextView tv;
+    private TextView tvEnd;
+    private ActivityUtils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,9 @@ public class EndActivity extends AppCompatActivity {
         if (actionBar != null)
             actionBar.setDisplayHomeAsUpEnabled(true);
 
-        tv = (TextView) findViewById(R.id.tvEnd);
+        tvEnd = (TextView) findViewById(R.id.tvEnd);
+        utils = ActivityUtils.getInstance();
+
         displayData();
     }
 
@@ -33,11 +39,9 @@ public class EndActivity extends AppCompatActivity {
         End end = (End) extras.get("end");
         Object[] flags = (Object[]) extras.get("flags");
 
-        tv.setText(end.getText() /*+ "\nYou failed " + flags.length + " times!"*/);
-//        for (Object o : flags) {
-//            String flag = (String) o;
-//            System.out.println(flag);
-//        }
+        String text = end.getText();
+
+        utils.setHtmlText(tvEnd, text);
     }
 
     @Override

@@ -3,7 +3,9 @@ package com.slicky.isu;
 import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.WindowManager;
+import android.widget.TextView;
 import com.slicky.isu.activity.ChooseActivity;
 
 /**
@@ -35,5 +37,12 @@ public class ActivityUtils {
             return activity.getResources().getColor(color_id, null);
         else
             return activity.getResources().getColor(color_id);
+    }
+
+    public void setHtmlText(TextView textView, String text) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            textView.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
+        else
+            textView.setText(Html.fromHtml(text));
     }
 }

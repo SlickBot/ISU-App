@@ -25,6 +25,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:id="@+id/tvMore"/>
     </ScrollView>
 

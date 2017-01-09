@@ -1,11 +1,14 @@
 package com.slicky.isu.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.MenuItem;
 import android.widget.TextView;
+import com.slicky.isu.ActivityUtils;
 import com.slicky.isu.R;
 
 /**
@@ -13,7 +16,8 @@ import com.slicky.isu.R;
  */
 public class MoreActivity extends AppCompatActivity {
 
-    private TextView tv;
+    private TextView tvMore;
+    private ActivityUtils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +28,8 @@ public class MoreActivity extends AppCompatActivity {
         if (actionBar != null)
             actionBar.setDisplayHomeAsUpEnabled(true);
 
-        tv = (TextView) findViewById(R.id.tvMore);
+        tvMore = (TextView) findViewById(R.id.tvMore);
+        utils = ActivityUtils.getInstance();
 
         setTitle();
         displayData();
@@ -41,7 +46,7 @@ public class MoreActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         String text = extras.getString("text");
-        tv.setText(text);
+        utils.setHtmlText(tvMore, text);
     }
 
     @Override

@@ -11,12 +11,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import com.slicky.isu.ActivityUtils;
 import com.slicky.isu.R;
 import com.slicky.isu.service.MyService;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
     private boolean shouldShowNotification = false;
+    private ActivityUtils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,0 +1,13 @@
+TODO
+====
+
+**ASAP**
+- filter za flags (EndActivity)
+- zmanjšaj padding na ScrollView in RelativeView (ChooseActivity)
+
+**OTHER**
+- nova ikona za vprašaj (ChooseActivity)
+- ScrollView iz sredine na vrh
+- sredinska poravnava teksta v DetailsActivity
+- sredinska poravnava teksta v EndActivity
+- sredinska poravnava teksta v MoreActivity

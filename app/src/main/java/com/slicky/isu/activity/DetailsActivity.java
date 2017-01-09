@@ -7,11 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
+import com.slicky.isu.ActivityUtils;
 import com.slicky.isu.R;
 
 public class DetailsActivity extends AppCompatActivity {
 
     private TextView tvDetails;
+    private ActivityUtils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class DetailsActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
 
         tvDetails = (TextView) findViewById(R.id.tvDetails);
+        utils = ActivityUtils.getInstance();
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -50,16 +53,16 @@ public class DetailsActivity extends AppCompatActivity {
     private void initText(int typeID) {
         switch (typeID) {
             case R.string.sp:
-                tvDetails.setText(R.string.sp_details);
+                utils.setHtmlText(tvDetails, getResources().getString(R.string.sp_details));
                 break;
             case R.string.doo:
-                tvDetails.setText(R.string.doo_details);
+                utils.setHtmlText(tvDetails, getResources().getString(R.string.doo_details));
                 break;
             case R.string.dno:
-                tvDetails.setText(R.string.dno_full);
+                utils.setHtmlText(tvDetails, getResources().getString(R.string.dno_full));
                 break;
             case R.string.dd:
-                tvDetails.setText(R.string.dd_full);
+                utils.setHtmlText(tvDetails, getResources().getString(R.string.dd_full));
                 break;
         }
     }
