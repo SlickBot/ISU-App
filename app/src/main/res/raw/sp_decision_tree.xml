@@ -9,10 +9,7 @@
                 Na spletu (e-VEM)
             </answer>
             <answer action="sp_fizicno_extra">
-                Fizično, na eni od točk VEM
-            </answer>
-            <answer action="sp_fizicno_extra">
-                Fizično, pri enemu od notarjev
+                Fizično, na eni od točk VEM ali pri notarju
             </answer>
         </decision>
 

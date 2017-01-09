@@ -8,7 +8,7 @@
                 Enoosebni d. o. o.
                 <flag>enoosebni_doo</flag>
             </answer>
-            <answer action="doo_vecosebni">
+            <answer action="doo_fizicno_extra">
                 Večosebni d. o. o.
                 <flag>vecosebni_doo</flag>
             </answer>
@@ -21,25 +21,12 @@
                 Na spletu (e-VEM)
             </answer>
             <answer action="doo_fizicno_extra">
-                Fizično, na eni od točk VEM
-            </answer>
-            <answer action="doo_fizicno_extra">
-                Fizično, pri notarju
-            </answer>
-        </decision>
-
-        <decision id="doo_vecosebni">
-            <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM</a></more>
-            Kje želite registrirati vaš večosebni d. o. o.?
-            <answer action="doo_fizicno_extra">
-                Fizično, na eni od točk VEM
-            </answer>
-            <answer action="doo_fizicno_extra">
-                Fizično, pri notarju
+                Fizično, na eni od točk VEM ali pri notarju
             </answer>
         </decision>
 
         <decision id="doo_fizicno_extra">
+            <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM</a></more>
             Vse potrebno lahko uredite na izbrani točki VEM ali pri notarju. Ali kljub temu želite okvirno pregledati potrebni postopek?
             <answer action="doo_spletno_3">
                 Da
@@ -216,10 +203,6 @@
 
         <action id="doo_enoosebni">
             <next decision="doo_enoosebni"/>
-        </action>
-
-        <action id="doo_vecosebni">
-            <next decision="doo_vecosebni"/>
         </action>
 
         <action id="doo_fizicno_extra">
