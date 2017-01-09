@@ -3,9 +3,7 @@
 
         <decision id="START">
             <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM</a>
-            Postopek na točki e-VEM je brezplačen in v povprečju traja 2 dni.
-            Postopek na točki VEM je prav tako brezplačen in v povprečju traja 4 dni.
-            Postopek pri notarju je plačljiv.</more>
+            Postopek na točki e-VEM je brezplačen in v povprečju traja 2 dni. Postopek na točki VEM je prav tako brezplačen in v povprečju traja 4 dni. Postopek pri notarju je plačljiv.</more>
             Kje želite registrirati vaš sp?
             <answer action="sp_spletno_1">
                 Na spletu (e-VEM)
@@ -65,11 +63,7 @@
         </decision>
 
         <decision id="sp_spletno_3">
-            <more>Ime podjetja mora biti v slovenskem jeziku, lahko tudi
-                v latinskem jeziku, ne sme vsebovati črk, ki noso v slovenski abecedi in
-                jasno se mora razlikovati od imen firm, ki so že vpisana v ragistru podjetij
-                AJPES
-            </more>
+            <more>Ime podjetja mora biti v slovenskem jeziku, lahko tudi v latinskem jeziku, ne sme vsebovati črk, ki noso v slovenski abecedi in se mora jasno razlikovati od imen firm, ki so že vpisana v ragistru podjetij AJPES.</more>
             Ste že izbrali primerno ime podjetja?
             <answer action="sp_spletno_4">
                 Da
@@ -81,11 +75,7 @@
         </decision>
 
         <decision id="sp_spletno_4">
-            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor
-                želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma,
-                v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate
-                mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.
-            </more>
+            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
             Ste določili sedež podjetja?
             <answer action="sp_spletno_5">
                 Da
@@ -108,11 +98,7 @@
         </decision>
 
         <decision id="sp_spletno_6">
-            <more>Bodoči podjetniki morajo po novem vlogi za registracijo priložiti
-                overjeno soglasje lastnika prostorov, kjer želijo imeti poslovni naslov.
-                Če je solastnikov več, potrebujejo soglasja vseh lastnikov.
-                Soglasje lahko brezplačno overijo na kateri koli točki VEM
-            </more>
+            <more>Bodoči podjetniki morajo po novem vlogi za registracijo priložiti overjeno soglasje lastnika prostorov, kjer želijo imeti poslovni naslov. Če je solastnikov več, potrebujejo soglasja vseh lastnikov. Soglasje lahko brezplačno overijo na kateri koli točki VEM.</more>
             Imate soglasje lastnika prostorov, kjer želite imeti poslovni naslov?
             <answer action="sp_spletno_7">
                 Da
@@ -124,11 +110,7 @@
         </decision>
 
         <decision id="sp_spletno_7">
-            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti,
-                s katerimi boste takoj začeli poslovati. Še po registraciji podjetja boste
-                lahko v podjetje dodajali nove dejavnosti.
-                Dejevnost izberete iz šifranta SKD.
-            </more>
+            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste takoj začeli poslovati. Še po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti. Dejevnost izberete iz šifranta SKD.</more>
             Ste določili dejavnost podjetja?
             <answer action="sp_spletno_8">
                 Da
@@ -140,10 +122,7 @@
         </decision>
 
         <decision id="sp_spletno_8">
-            <more>pred pričetkom opravljanja dejavnosti je potrebno pridobiti dovoljenje za
-                opravljanje dejavosti, če se zahteva za dejavnost, ki jo nameravate
-                opravljati. Seznam takih dejavnosti najdete na e-vem
-            </more>
+            <more>pred pričetkom opravljanja dejavnosti je potrebno pridobiti dovoljenje za opravljanje dejavosti, če se zahteva za dejavnost, ki jo nameravate opravljati. Seznam takih dejavnosti najdete na e-vem.</more>
             Ali vaša dejavnost potrebuje dovoljenje za opravljanje dejavnosti?
             <answer action="sp_spletno_9">
                 Da
@@ -155,11 +134,7 @@
         </decision>
 
         <decision id="sp_spletno_9">
-            <more>v kolikor želi samostojni podjetnik v svojem podjetju pooblatiti osebo za
-                zastopanje, lahko pri postopku registracije (ali še po ustanovitvi podjetja)
-                določi prokurista podjetja. Za vpis prokurista podjetja potrebuje podjetnik
-                le EMŠO številko osebe, in jo pooblašča za zastopanje.
-            </more>
+            <more>v kolikor želi samostojni podjetnik v svojem podjetju pooblatiti osebo za zastopanje, lahko pri postopku registracije (ali še po ustanovitvi podjetja) določi prokurista podjetja. Za vpis prokurista podjetja potrebuje podjetnik le EMŠO številko osebe, in jo pooblašča za zastopanje.</more>
             Želite dodati zastopnika za svoj sp?
             <answer action="sp_davcni_register">
                 Da
@@ -171,8 +146,7 @@
         </decision>
 
         <decision id="sp_davcni_register">
-            <more>na E-VEM lahko oddate prijavo v davčni register, ali pa to storite v 8 dneh
-                od dneva vpisa v PRS
+            <more>na E-VEM lahko oddate prijavo v davčni register, ali pa to storite v 8 dneh od dneva vpisa v PRS.
             </more>
             Ste že oddali prijavo v davčni register??
             <answer action="sp_spletno_konec">
