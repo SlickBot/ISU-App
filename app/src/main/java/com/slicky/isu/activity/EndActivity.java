@@ -22,7 +22,7 @@ public class EndActivity extends AppCompatActivity {
         if (actionBar != null)
             actionBar.setDisplayHomeAsUpEnabled(true);
 
-        tv = (TextView) findViewById(R.id.description_text);
+        tv = (TextView) findViewById(R.id.tvEnd);
         displayData();
     }
 

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Ustanovitev podjetja</string>
-    <string name="welocome">Dobrodošli</string>
+    <string name="welcome">Dobrodošli</string>
 
     <string name="welcome_screen_welcome">Dobrodošli!</string>
     <string name="welcome_screen_title1">Življenski dogodek</string>

@@ -11,23 +11,41 @@
         android:background="@color/colorPrimaryDark"
         tools:context="com.slicky.isu.activity.ChooseActivity">
 
-    <TextView
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/white"
-            android:textSize="22sp"
-            android:gravity="center"
-            android:paddingTop="30dp"
-            android:paddingBottom="30dp"
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:orientation="vertical"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:id="@+id/tvQuestion"/>
+            android:id="@+id/llQuestions">
+
+        <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvQuestion"/>
+
+        <ImageView
+                android:contentDescription="@string/more"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/question_mark"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:onClick="moreForQuestion"
+                android:id="@+id/ivMore"/>
+
+    </LinearLayout>
 
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvQuestion"
+            android:layout_below="@+id/llQuestions"
             android:layout_above="@+id/bContinue"
             android:paddingTop="25dp"
             android:paddingBottom="25dp"

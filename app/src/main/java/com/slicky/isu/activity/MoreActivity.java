@@ -33,16 +33,14 @@ public class MoreActivity extends AppCompatActivity {
     private void setTitle() {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        String question = extras.getString("question");
-        String answer = extras.getString("answer");
-        String title = String.format("%s - %s", question, answer);
+        String title = extras.getString("title");
         setTitle(title);
     }
 
     private void displayData() {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        String text = extras.getString("more");
+        String text = extras.getString("text");
         tv.setText(text);
     }
 

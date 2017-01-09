@@ -66,6 +66,12 @@ object DecisionTreeParser {
             // select text and trim it
             val decisionText = (decisionElement.data as String).trim()
 
+            // extract more element
+            val moreElement = decisionElement.element("more")
+            // extract text from more element
+            val data = moreElement?.data
+            val moreText = if (data != null) (data as String).trim() else null
+
             // extract flag elements
             val flagElements = decisionElement.elements("flag") ?: emptyList<Element>()
             // extract text from flag elements
@@ -79,7 +85,7 @@ object DecisionTreeParser {
                 throw DecisionTreeException { "Decision has no \"answer\" elements!" }
 
             // return Decision
-            Decision(decisionID, flags, decisionText, answers)
+            Decision(decisionID, flags, decisionText, moreText, answers)
         }
     }
 

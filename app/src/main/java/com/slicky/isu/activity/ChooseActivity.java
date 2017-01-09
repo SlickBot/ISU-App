@@ -31,7 +31,9 @@ public class ChooseActivity extends AppCompatActivity {
     private List<String> flags;
 
     private LinearLayout llAnswers;
+    private LinearLayout llQuestions;
     private TextView tvQuestions;
+    private ImageView ivMore;
 
     private TextView selectedView;
     private Answer selectedAnswer;
@@ -44,7 +46,9 @@ public class ChooseActivity extends AppCompatActivity {
         utils.removeActionBar(this);
 
         llAnswers = (LinearLayout) findViewById(R.id.llAnswers);
+        llQuestions = (LinearLayout) findViewById(R.id.llQuestions);
         tvQuestions = (TextView) findViewById(R.id.tvQuestion);
+        ivMore = (ImageView) findViewById(R.id.ivMore);
         flags = new ArrayList<>();
 
         Intent intent = getIntent();
@@ -122,6 +126,11 @@ public class ChooseActivity extends AppCompatActivity {
     private void setDecision(final Decision decision) {
         // display question
         tvQuestions.setText(decision.getText());
+        // display more if not present
+        if (decision.getMore() != null)
+            ivMore.setVisibility(View.VISIBLE);
+        else
+            ivMore.setVisibility(View.GONE);
 
         // set decision as current
         currentDecision = decision;
@@ -131,7 +140,7 @@ public class ChooseActivity extends AppCompatActivity {
         // hide answers
         llAnswers.setAlpha(0);
         // hide questions
-        tvQuestions.setAlpha(0);
+        llQuestions.setAlpha(0);
 
         // remove old answers
         llAnswers.removeAllViews();
@@ -141,7 +150,7 @@ public class ChooseActivity extends AppCompatActivity {
         }
 
         // display questions
-        tvQuestions.animate()
+        llQuestions.animate()
             .alpha(1.0f)
             .setDuration(1000)
             .setListener(null);
@@ -160,7 +169,7 @@ public class ChooseActivity extends AppCompatActivity {
                 (RelativeLayout) inflater.inflate(R.layout.button_layout, llAnswers, false);
 
         final TextView tv = (TextView) layout.findViewById(R.id.tvAnswer);
-        final ImageView iv = (ImageView) layout.findViewById(R.id.ivMore);
+        final ImageView iv = (ImageView) layout.findViewById(R.id.ibMore);
 
         // set button text
         tv.setText(answer.getText());
@@ -177,7 +186,7 @@ public class ChooseActivity extends AppCompatActivity {
             iv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    displayMoreFor(answer);
+                    moreForAnswer(answer);
                 }
             });
         }
@@ -200,11 +209,21 @@ public class ChooseActivity extends AppCompatActivity {
         selectedAnswer = answer;
     }
 
-    private void displayMoreFor(Answer answer) {
+    private void moreForAnswer(Answer answer) {
+        String questionString = currentDecision.getText();
+        String answerString = answer.getText();
+        String title = String.format("%s - %s", questionString, answerString);
+
         Intent intent = new Intent(this, MoreActivity.class);
-        intent.putExtra("question", currentDecision.getText());
-        intent.putExtra("answer", answer.getText());
-        intent.putExtra("more", answer.getMore());
+        intent.putExtra("title", title);
+        intent.putExtra("text", answer.getMore());
+        startActivity(intent);
+    }
+
+    public void moreForQuestion(View view) {
+        Intent intent = new Intent(this, MoreActivity.class);
+        intent.putExtra("title", currentDecision.getText());
+        intent.putExtra("text", currentDecision.getMore());
         startActivity(intent);
     }
 
