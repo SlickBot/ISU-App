@@ -45,7 +45,7 @@
             </answer>
             <answer action="sp_oblika">
                 Ne
-                <flag>opreme_sp</flag>
+                <flag>oprema</flag>
             </answer>
         </decision>
 
@@ -70,42 +70,54 @@
             </answer>
             <answer action="sp_spletno_4">
                 Ne
-                <flag>ime_sp</flag>
+                <flag>ime</flag>
             </answer>
         </decision>
 
         <decision id="sp_spletno_4">
             <more>sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
             Ste določili sedež podjetja?
-            <answer action="sp_spletno_5">
+            <answer action="sp_spletno_4_extra">
+                Da
+            </answer>
+            <answer action="sp_spletno_6">
+                Ne
+            <flag>sedez</flag>
+            <flag>soglasje_lastnika</flag>
+            </answer>
+        </decision>
+
+        <decision id="sp_spletno_4_extra">
+            Ste edini lastnik na naslovu, katerega ste izbrali kot sedež podjetja?
+            <answer action="sp_spletno_6">
                 Da
             </answer>
             <answer action="sp_spletno_5">
                 Ne
-                <flag>sedez_sp</flag>
             </answer>
         </decision>
 
         <decision id="sp_spletno_5">
-            Imate izbrane kontaktne podatke?
+            <more>Bodoči podjetniki morajo po novem vlogi za registracijo priložiti overjeno soglasje lastnika prostorov, kjer želijo imeti poslovni naslov. Če je solastnikov več, potrebujejo soglasja vseh lastnikov. Soglasje lahko brezplačno overijo na kateri koli točki VEM.</more>
+            Imate soglasje lastnika prostorov, kjer želite imeti poslovni naslov?
             <answer action="sp_spletno_6">
                 Da
             </answer>
             <answer action="sp_spletno_6">
                 Ne
-                <flag>kontaktni_sp</flag>
+            <flag>soglasje_lastnika</flag>
             </answer>
         </decision>
 
         <decision id="sp_spletno_6">
-            <more>Bodoči podjetniki morajo po novem vlogi za registracijo priložiti overjeno soglasje lastnika prostorov, kjer želijo imeti poslovni naslov. Če je solastnikov več, potrebujejo soglasja vseh lastnikov. Soglasje lahko brezplačno overijo na kateri koli točki VEM.</more>
-            Imate soglasje lastnika prostorov, kjer želite imeti poslovni naslov?
+            <more>Podatki kot so: e-mail, spletni naslov, telefonska številka, fax,...</more>
+            Imate izbrane kontaktne podatke?
             <answer action="sp_spletno_7">
                 Da
             </answer>
             <answer action="sp_spletno_7">
                 Ne
-                <flag>soglasje_lastnika_sp</flag>
+                <flag>kontaktni</flag>
             </answer>
         </decision>
 
@@ -117,7 +129,7 @@
             </answer>
             <answer action="sp_spletno_9">
                 Ne
-                <flag>dejavnosti_sp</flag>
+            <flag>dejavnosti</flag>
             </answer>
         </decision>
 
@@ -138,7 +150,7 @@
             Želite dodati zastopnika za svoj sp?
             <answer action="sp_davcni_register">
                 Da
-                <flag>zastopnik_sp</flag>
+                <flag>zastopnik</flag>
             </answer>
             <answer action="sp_davcni_register">
                 Ne

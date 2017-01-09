@@ -2,29 +2,40 @@
     <decisions>
 
         <decision id="START">
-            <more>Seznam vseh točk VEM: http://evem.gov.si/info/tocke-vem/</more>
-            Kje želite registrirati vaš sp?
-            <answer action="doo_oblika">
+            <more>Več informacij o razlikah med obema??</more>
+            Želite ustanoviti enoosebni ali večosebni d. o. o.
+            <answer action="doo_spletno_1">
+                Enoosebni d. o. o.
+                <flag>enoosebni_doo</flag>
+            </answer>
+            <answer action="doo_spletno_1">
+                Večosebni d. o. o.
+                <flag>vecosebni_doo</flag>
+            </answer>
+        </decision>
+
+        <decision id="doo_enoosebni">
+            <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM</a></more>
+            Kje želite registrirati vaš enoosebni d. o. o.?
+            <answer action="doo_spletno_1">
                 Na spletu (e-VEM)
             </answer>
             <answer action="doo_VEM">
                 Fizično, na eni od točk VEM
             </answer>
             <answer action="doo_notar">
-                Fizično, na eni od točk VEM
+                Fizično, pri notarju
             </answer>
         </decision>
 
-        <decision id="doo_oblika">
-            <more>Več informacij o razlikah med obema??</more>
-            Želite ustanoviti polni ali popoldanski sp?
-            <answer action="doo_spletno_1">
-                Polni S.P.
-                <flag>polni_sp</flag>
+        <decision id="doo_vecosebni">
+            <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM</a></more>
+            Kje želite registrirati vaš večosebni d. o. o.?
+            <answer action="doo_VEM">
+                Fizično, na eni od točk VEM
             </answer>
-            <answer action="doo_spletno_1">
-                Popoldanski S.P.
-                <flag>popoldanski_sp</flag>
+            <answer action="doo_notar">
+                Fizično, pri notarju
             </answer>
         </decision>
 
@@ -47,82 +58,82 @@
             </answer>
             <answer action="doo_spletno_3">
                 Ne
-                <flag>opreme_sp</flag>
+                <flag>oprema</flag>
             </answer>
         </decision>
 
         <decision id="doo_spletno_3">
-            <more>ime podjetja mora biti v slovenskem jeziku, lahko tudi
-                v latinskem jeziku, ne sme vsebovati črk, ki noso v slovenski abecedi in
-                jasno se mora razlikovati od imen firm, ki so že vpisana v ragistru podjetij
-                AJPES
-            </more>
+            <more>Ime podjetja mora biti v slovenskem jeziku, lahko tudi v latinskem jeziku, ne sme vsebovati črk, ki noso v slovenski abecedi in se mora jasno razlikovati od imen firm, ki so že vpisana v ragistru podjetij AJPES.</more>
             Ste že izbrali primerno ime podjetja?
             <answer action="doo_spletno_4">
                 Da
             </answer>
             <answer action="doo_spletno_4">
                 Ne
-                <flag>ime_sp</flag>
+            <flag>ime</flag>
             </answer>
         </decision>
 
         <decision id="doo_spletno_4">
-            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor
-                želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma,
-                v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate
-                mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov
-            </more>
+            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
             Ste določili sedež podjetja?
-            <answer action="doo_spletno_5">
+            <answer action="doo_spletno_4_extra">
                 Da
             </answer>
-            <answer action="doo_spletno_5">
+            <answer action="doo_spletno_6">
                 Ne
-                <flag>sedez_sp</flag>
+            <flag>sedez</flag>
+            <flag>soglasje_lastnika</flag>
+            </answer>
+        </decision>
+
+        <decision id="doo_spletno_4_extra">
+            Ste edini lastnik na naslovu, katerega ste izbrali kot sedež podjetja?
+            <answer action="sp_spletno_6">
+                Da
+            </answer>
+            <answer action="sp_spletno_5">
+                Ne
             </answer>
         </decision>
 
         <decision id="doo_spletno_5">
-            Imate izbrane kontaktne podatke?
-            <answer action="doo_spletno_6">
-                Da
-            </answer>
-            <answer action="doo_spletno_6">
-                Ne
-                <flag>kontaktni_sp</flag>
-            </answer>
-        </decision>
-
-        <decision id="doo_spletno_6">
             <more>Bodoči podjetniki morajo po novem vlogi za registracijo priložiti
                 overjeno soglasje lastnika prostorov, kjer želijo imeti poslovni naslov.
                 Če je solastnikov več, potrebujejo soglasja vseh lastnikov.
                 Soglasje lahko brezplačno overijo na kateri koli točki VEM
             </more>
             Imate soglasje lastnika prostorov, kjer želite imeti poslovni naslov?
+            <answer action="doo_spletno_6">
+                Da
+            </answer>
+            <answer action="doo_spletno_6">
+                Ne
+            <flag>soglasje_lastnika</flag>
+            </answer>
+        </decision>
+
+        <decision id="doo_spletno_6">
+            <more>Podatki kot so: e-mail, spletni naslov, telefonska številka, fax,...</more>
+            Imate izbrane kontaktne podatke?
             <answer action="doo_spletno_7">
                 Da
             </answer>
             <answer action="doo_spletno_7">
                 Ne
-                <flag>soglasje_lastnika_sp</flag>
+                <flag>kontaktni</flag>
             </answer>
         </decision>
 
         <decision id="doo_spletno_7">
-            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti,
-                s katerimi boste takoj začeli poslovati. Še po registraciji podjetja boste
-                lahko v podjetje dodajali nove dejavnosti.
-                Dejevnost izberete iz šifranta SKD.
-            </more>
+            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste takoj začeli poslovati. Še po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti. Dejevnost izberete iz šifranta SKD.</more>
             Ste določili dejavnost podjetja?
             <answer action="doo_spletno_8">
                 Da
             </answer>
             <answer action="doo_spletno_9">
                 Ne
-                <flag>dejavnosti_sp</flag>
+            <flag>dejavnosti</flag>
             </answer>
         </decision>
 
@@ -142,34 +153,41 @@
         </decision>
 
         <decision id="doo_spletno_9">
-            <more>v kolikor želi samostojni podjetnik v svojem podjetju pooblatiti osebo za
-                zastopanje, lahko pri postopku registracije (ali še po ustanovitvi podjetja)
-                določi prokurista podjetja. Za vpis prokurista podjetja potrebuje podjetnik
-                le EMŠO številko osebe, in jo pooblašča za zastopanje.
-            </more>
-            Želite dodati zastopnika za svoj sp?
+            <more>Ob registraciji d.o.o mora družbeni določiti vsaj enega direktorja. To ste lahko vi, kot ustanovitelj, ali kdo tretji. Direktor, ki ni nikjer zaposlen, se mora v podjetju zaposliti.</more>
+            Ste že izbrali zastopnika podjetja?
             <answer action="sp_davcni_register">
                 Da
-                <flag>zastopnik_sp</flag>
             </answer>
             <answer action="sp_davcni_register">
                 Ne
+                <flag>izberi_zastopnika</flag>
             </answer>
         </decision>
 
-        <decision id="sp_davcni_register">
-            <more>na E-VEM lahko oddate prijavo v davčni register, ali pa to storite v 8 dneh
-                od dneva vpisa v PRS
-            </more>
-            Ste že oddali prijavo v davčni register??
+        <decision id="doo_zastopnik">
+            <more>Potrebni podatki: ime, priimek, emšo, vrsta zastopanja(direktor/prokurist), način zastopanja(samostojno/skupno)</more>
+            Imate podatke o izbranem zastopniku?
             <answer action="doo_spletno_konec">
                 Da
             </answer>
             <answer action="doo_spletno_konec">
                 Ne
-                <flag>prijava_v_davcni_register</flag>
+            <flag>zberi_podatke_zastopnika</flag>
             </answer>
         </decision>
+
+        <decision id="doo_podatki_o_ustanoviteljih">
+            <more>Potrebni podatki: ime, priimek, EMŠO, delež v kapitalu, ste že lastnik kakšnega podjetja?</more>
+            Imate vse podatke o ustanoviteljih?
+            <answer action="doo_spletno_konec">
+                Da
+            </answer>
+            <answer action="doo_spletno_konec">
+                Ne
+                <flag>pridobi_podatke</flag>
+            </answer>
+        </decision>
+
 
     </decisions>
     <actions>
