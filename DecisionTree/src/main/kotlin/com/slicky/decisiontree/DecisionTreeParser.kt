@@ -92,11 +92,22 @@ object DecisionTreeParser {
                     // select text and trim it
                     val answerText = (answerElement.data as String).trim()
 
+                    // extract flag elements
+                    val flagElements = answerElement.elements("flag") ?: emptyList<Element>()
+                    // extract text from flag elements
+                    val flags = flagElements.map { ((it as Element).data as String).trim() }
+
+                    // extract more element
+                    val moreElement = answerElement.element("more")
+                    // extract text from more element
+                    val data = moreElement?.data
+                    val moreText = if (data != null) (data as String).trim() else null
+
                     // select action id from action attribute
                     val actionID = answerElement.attribute("action").value
 
                     // return Action
-                    Answer(answerText, actionID)
+                    Answer(answerText, flags, moreText, actionID)
                 }
     }
 

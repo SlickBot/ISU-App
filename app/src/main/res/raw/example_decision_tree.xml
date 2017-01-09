@@ -3,11 +3,17 @@
 
         <decision id="START">
             Has use-by date passed?
+            <link>
+                www.google.com
+            </link>
             <answer action="action_not_spoiled">
                 No
             </answer>
             <answer action="action_more_than">
                 Yes
+                <more>
+                    Več besedila!
+                </more>
             </answer>
         </decision>
 

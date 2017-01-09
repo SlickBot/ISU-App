@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private void startQuestions(int resourceID) {
+    private void startChoose(int resourceID) {
         Intent intent = new Intent(this, ChooseActivity.class);
         intent.putExtra("resource_id", resourceID);
         startActivity(intent);
@@ -122,24 +122,24 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void startAbout() {
-        Intent intent = new Intent(this, AboutActivity.class);
+        Intent intent = new Intent(this, SplashActivity.class);
         startActivity(intent);
     }
 
     public void spClick(View view) {
-        startQuestions(R.raw.example_decision_tree);
+        startChoose(R.raw.example_decision_tree);
     }
 
     public void dooClick(View view) {
-        startQuestions(R.raw.example_decision_tree);
+        startChoose(R.raw.example_decision_tree);
     }
 
     public void dnoClick(View view) {
-        startQuestions(R.raw.example_decision_tree);
+        startChoose(R.raw.example_decision_tree);
     }
 
     public void ddClick(View view) {
-        startQuestions(R.raw.example_decision_tree);
+        startChoose(R.raw.example_decision_tree);
     }
 
     public void toggleNotification(View view) {

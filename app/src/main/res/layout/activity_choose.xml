@@ -44,7 +44,7 @@
     </ScrollView>
 
     <Button
-            android:text="@string/button_continue"
+            android:text="@string/next"
             android:textColor="@android:color/white"
             android:background="@color/colorPrimary"
             android:onClick="continueClick"

@@ -9,7 +9,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:background="@color/colorPrimaryDark"
-        tools:context="com.slicky.isu.activity.EndActivity">
+        tools:context="com.slicky.isu.activity.MoreActivity">
 
     <TextView
             android:layout_width="wrap_content"
@@ -23,5 +23,5 @@
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:gravity="center"
-            android:id="@+id/description_text"/>
+            android:id="@+id/tvMore"/>
 </RelativeLayout>

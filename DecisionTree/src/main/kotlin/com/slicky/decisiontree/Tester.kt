@@ -9,8 +9,8 @@ import java.util.*
  */
 fun main(args: Array<String>) {
 //    val path = "/tree.xml"
-//    val path = "/wd40_vs_tape.xml"
-    val path = "/example_decision_tree.xml"
+    val path = "/wd40_vs_tape.xml"
+//    val path = "/example_decision_tree.xml"
     Tester().run(path)
 }
 

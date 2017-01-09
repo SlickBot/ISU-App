@@ -2,7 +2,6 @@ package com.slicky.isu.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -11,11 +10,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
+import android.widget.*;
 import com.slicky.decisiontree.*;
 import com.slicky.isu.ActivityUtils;
 import com.slicky.isu.R;
@@ -31,10 +28,13 @@ public class ChooseActivity extends AppCompatActivity {
 
     private TreeData data;
     private Decision currentDecision;
+    private List<String> flags;
+
     private LinearLayout llAnswers;
     private TextView tvQuestions;
-    private RadioGroup group;
-    private List<String> flags;
+
+    private TextView selectedView;
+    private Answer selectedAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,16 +66,18 @@ public class ChooseActivity extends AppCompatActivity {
     }
 
     public void continueClick(View view) {
-        int checked = group.getCheckedRadioButtonId();
-        if (checked == -1) {
+        if (selectedView == null || selectedAnswer == null) {
             displaySelectionNotification();
             return;
         }
 
         try {
-            Answer selectedAnswer = currentDecision.getAnswers().get(checked);
             String actionID = selectedAnswer.getActionID();
             Action selectedAction = data.findAction(actionID);
+
+            // add flags from selected answer
+            flags.addAll(selectedAnswer.getFlags());
+            // add flags from selected action
             flags.addAll(selectedAction.getFlags());
 
             switch (selectedAction.getType()) {
@@ -131,23 +133,11 @@ public class ChooseActivity extends AppCompatActivity {
         // hide questions
         tvQuestions.setAlpha(0);
 
-        // create new radio group
-        group = new RadioGroup(ChooseActivity.this);
-        // set radio gravity
-        group.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-
-        // remove old group
+        // remove old answers
         llAnswers.removeAllViews();
-        // add new group
-        llAnswers.addView(group);
-
-        List<Answer> answers = decision.getAnswers();
         // add new answers
-        for (int i = 0; i < answers.size(); i++) {
-            Answer answer = answers.get(i);
-            RadioButton answerButton = createAnswerButton(answer);
-            answerButton.setId(i);
-            group.addView(answerButton);
+        for (Answer answer : decision.getAnswers()) {
+            llAnswers.addView(createButton(answer));
         }
 
         // display questions
@@ -159,18 +149,63 @@ public class ChooseActivity extends AppCompatActivity {
         // display answers
         llAnswers.animate()
                 .alpha(1.0f)
+                .setStartDelay(500)
                 .setDuration(1000)
-                .setStartDelay(1000)
                 .setListener(null);
     }
 
-    private RadioButton createAnswerButton(Answer answer) {
-        RadioButton button = new RadioButton(this);
-        button.setText(answer.getText());
-        button.setTextSize(20.0f);
-        button.setTextColor(Color.WHITE);
-        button.setPadding(0, 75, 0, 75);
-        return button;
+    private RelativeLayout createButton(final Answer answer) {
+        final LayoutInflater inflater = getLayoutInflater();
+        final RelativeLayout layout =
+                (RelativeLayout) inflater.inflate(R.layout.button_layout, llAnswers, false);
+
+        final TextView tv = (TextView) layout.findViewById(R.id.tvAnswer);
+        final ImageView iv = (ImageView) layout.findViewById(R.id.ivMore);
+
+        // set button text
+        tv.setText(answer.getText());
+        // set button on selected listener
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setSelected((TextView) layout.findViewById(R.id.tvAnswer), answer);
+            }
+        });
+        // display more icon if there is more text
+        if (answer.getMore() != null) {
+            iv.setVisibility(View.VISIBLE);
+            iv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    displayMoreFor(answer);
+                }
+            });
+        }
+
+        return layout;
+    }
+
+    private void setSelected(TextView view, Answer answer) {
+        if (selectedAnswer == answer)
+            return;
+
+        int selectedColor = utils.getColor(this, R.color.colorAccent);
+        int unselectedColor = utils.getColor(this, R.color.colorPrimary);
+
+        view.setBackgroundColor(selectedColor);
+        if (selectedView != null)
+            selectedView.setBackgroundColor(unselectedColor);
+
+        selectedView = view;
+        selectedAnswer = answer;
+    }
+
+    private void displayMoreFor(Answer answer) {
+        Intent intent = new Intent(this, MoreActivity.class);
+        intent.putExtra("question", currentDecision.getText());
+        intent.putExtra("answer", answer.getText());
+        intent.putExtra("more", answer.getMore());
+        startActivity(intent);
     }
 
     private void alertAndDie(DecisionTreeException e) {

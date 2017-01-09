@@ -9,7 +9,8 @@
     <string name="welcome_screen_about_us">O nas</string>
     <string name="welcome_screen_class_name">Informacijski sistemi v upravi ©</string>
 
-    <string name="button_continue">Nadaljuj</string>
+    <string name="forward">Nadaljuj</string>
+    <string name="next">Naprej</string>
     <string name="share">Deli z drugimi</string>
     <string name="settings">Možnosti</string>
 
@@ -34,4 +35,5 @@
     <string name="display_details">Prikaz podrobnosti</string>
     <string name="details_for">Podrobnosti za</string>
     <string name="about_us">O nas</string>
+    <string name="more">Več</string>
 </resources>

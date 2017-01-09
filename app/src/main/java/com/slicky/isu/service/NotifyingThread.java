@@ -37,12 +37,13 @@ public class NotifyingThread extends Thread {
     }
 
     private void createNotification() {
-        Notification.Builder builder = new Notification.Builder(service);
         Intent resultIntent = new Intent(service.getApplicationContext(), MyService.class);
         resultIntent.putExtra("shouldRun", false);
         PendingIntent pendingIntent = PendingIntent.getService(
                 service.getApplicationContext(), 0,
                 resultIntent, 0);
+
+        Notification.Builder builder = new Notification.Builder(service);
         builder.setSmallIcon(R.drawable.man_with_tie)
                 .setContentIntent(pendingIntent)
                 .setContentTitle(service.getResources().getString(R.string.app_name))
