@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="e_vem"><a href="http://evem.gov.si/evem/">Spleta stran e-VEM</a></string>
     <string name="dig_potrdilo">Pridobite si digitalno potrdilo.</string>
     <string name="opreme_sp">Pridobite si ustrezno opremo.</string>
     <string name="polni_sp">(MANJKA) Opis za polni sp</string>
