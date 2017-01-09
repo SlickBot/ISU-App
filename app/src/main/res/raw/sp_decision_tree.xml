@@ -129,7 +129,7 @@
             </answer>
             <answer action="sp_spletno_9">
                 Ne
-            <flag>dejavnosti</flag>
+            <flag>dejavnosti_sp</flag>
             </answer>
         </decision>
 
@@ -195,6 +195,10 @@
 
         <action id="sp_spletno_4">
             <next decision="sp_spletno_4"/>
+        </action>
+
+        <action id="sp_spletno_4_extra">
+            <next decision="sp_spletno_4_extra"/>
         </action>
 
         <action id="sp_spletno_5">

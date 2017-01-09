@@ -4,11 +4,11 @@
         <decision id="START">
             <more>Več informacij o razlikah med obema??</more>
             Želite ustanoviti enoosebni ali večosebni d. o. o.
-            <answer action="doo_spletno_1">
+            <answer action="doo_enoosebni">
                 Enoosebni d. o. o.
                 <flag>enoosebni_doo</flag>
             </answer>
-            <answer action="doo_spletno_1">
+            <answer action="doo_vecosebni">
                 Večosebni d. o. o.
                 <flag>vecosebni_doo</flag>
             </answer>
@@ -20,10 +20,10 @@
             <answer action="doo_spletno_1">
                 Na spletu (e-VEM)
             </answer>
-            <answer action="doo_VEM">
+            <answer action="doo_fizicno_extra">
                 Fizično, na eni od točk VEM
             </answer>
-            <answer action="doo_notar">
+            <answer action="doo_fizicno_extra">
                 Fizično, pri notarju
             </answer>
         </decision>
@@ -31,11 +31,21 @@
         <decision id="doo_vecosebni">
             <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM</a></more>
             Kje želite registrirati vaš večosebni d. o. o.?
-            <answer action="doo_VEM">
+            <answer action="doo_fizicno_extra">
                 Fizično, na eni od točk VEM
             </answer>
-            <answer action="doo_notar">
+            <answer action="doo_fizicno_extra">
                 Fizično, pri notarju
+            </answer>
+        </decision>
+
+        <decision id="doo_fizicno_extra">
+            Vse potrebno lahko uredite na izbrani točki VEM ali pri notarju. Ali kljub temu želite okvirno pregledati potrebni postopek?
+            <answer action="doo_spletno_3">
+                Da
+            </answer>
+            <answer action="doo_VEM">
+                Ne
             </answer>
         </decision>
 
@@ -89,10 +99,10 @@
 
         <decision id="doo_spletno_4_extra">
             Ste edini lastnik na naslovu, katerega ste izbrali kot sedež podjetja?
-            <answer action="sp_spletno_6">
+            <answer action="doo_spletno_6">
                 Da
             </answer>
-            <answer action="sp_spletno_5">
+            <answer action="doo_spletno_5">
                 Ne
             </answer>
         </decision>
@@ -133,19 +143,16 @@
             </answer>
             <answer action="doo_spletno_9">
                 Ne
-            <flag>dejavnosti</flag>
+            <flag>dejavnosti_doo</flag>
             </answer>
         </decision>
 
         <decision id="doo_spletno_8">
-            <more>pred pričetkom opravljanja dejavnosti je potrebno pridobiti dovoljenje za
-                opravljanje dejavosti, če se zahteva za dejavnost, ki jo nameravate
-                opravljati. Seznam takih dejavnosti najdete na e-vem
-            </more>
+            <more>Pred pričetkom opravljanja dejavnosti je potrebno pridobiti dovoljenje za opravljanje dejavosti, če se zahteva za dejavnost, ki jo nameravate opravljati. Seznam takih dejavnosti najdete na e-vem.</more>
             Ali vaša dejavnost potrebuje dovoljenje za opravljanje dejavnosti?
             <answer action="doo_spletno_9">
                 Da
-                <flag>dovoljenje_za_dejavnost_sp</flag>
+            <flag>dovoljenje_za_dejavnost_doo</flag>
             </answer>
             <answer action="doo_spletno_9">
                 Ne
@@ -155,36 +162,47 @@
         <decision id="doo_spletno_9">
             <more>Ob registraciji d.o.o mora družbeni določiti vsaj enega direktorja. To ste lahko vi, kot ustanovitelj, ali kdo tretji. Direktor, ki ni nikjer zaposlen, se mora v podjetju zaposliti.</more>
             Ste že izbrali zastopnika podjetja?
-            <answer action="sp_davcni_register">
+            <answer action="doo_zastopnik">
                 Da
             </answer>
-            <answer action="sp_davcni_register">
+            <answer action="doo_podatki_o_ustanoviteljih">
                 Ne
-                <flag>izberi_zastopnika</flag>
+            <flag>izberi_zastopnika</flag>
             </answer>
         </decision>
 
         <decision id="doo_zastopnik">
             <more>Potrebni podatki: ime, priimek, emšo, vrsta zastopanja(direktor/prokurist), način zastopanja(samostojno/skupno)</more>
             Imate podatke o izbranem zastopniku?
-            <answer action="doo_spletno_konec">
+            <answer action="doo_podatki_o_ustanoviteljih">
                 Da
             </answer>
-            <answer action="doo_spletno_konec">
+            <answer action="doo_podatki_o_ustanoviteljih">
                 Ne
-            <flag>zberi_podatke_zastopnika</flag>
+            <flag>zberi_podatke_zastopnika_doo</flag>
             </answer>
         </decision>
 
         <decision id="doo_podatki_o_ustanoviteljih">
             <more>Potrebni podatki: ime, priimek, EMŠO, delež v kapitalu, ste že lastnik kakšnega podjetja?</more>
             Imate vse podatke o ustanoviteljih?
+            <answer action="doo_napoved_FURS">
+                Da
+            </answer>
+            <answer action="doo_napoved_FURS">
+                Ne
+                <flag>pridobi_podatke_doo</flag>
+            </answer>
+        </decision>
+
+        <decision id="doo_napoved_FURS">
+            Imate pripravljeno napoved dohodkov in odhodkov za FURS?
             <answer action="doo_spletno_konec">
                 Da
             </answer>
             <answer action="doo_spletno_konec">
                 Ne
-                <flag>pridobi_podatke</flag>
+            <flag>pripravi_napoved_doo</flag>
             </answer>
         </decision>
 
@@ -194,6 +212,22 @@
 
         <action id="doo_oblika">
             <next decision="doo_oblika"/>
+        </action>
+
+        <action id="doo_enoosebni">
+            <next decision="doo_enoosebni"/>
+        </action>
+
+        <action id="doo_vecosebni">
+            <next decision="doo_vecosebni"/>
+        </action>
+
+        <action id="doo_fizicno_extra">
+            <next decision="doo_fizicno_extra"/>
+        </action>
+
+        <action id="doo_vecosebni">
+            <next decision="doo_vecosebni"/>
         </action>
 
         <action id="doo_spletno_1">
@@ -210,6 +244,10 @@
 
         <action id="doo_spletno_4">
             <next decision="doo_spletno_4"/>
+        </action>
+
+        <action id="doo_spletno_4_extra">
+            <next decision="doo_spletno_4_extra"/>
         </action>
 
         <action id="doo_spletno_5">
@@ -232,8 +270,16 @@
             <next decision="doo_spletno_9"/>
         </action>
 
-        <action id="sp_davcni_register">
-            <next decision="sp_davcni_register"/>
+        <action id="doo_zastopnik">
+            <next decision="doo_zastopnik"/>
+        </action>
+
+        <action id="doo_podatki_o_ustanoviteljih">
+            <next decision="doo_podatki_o_ustanoviteljih"/>
+        </action>
+
+        <action id="doo_napoved_FURS">
+            <next decision="doo_napoved_FURS"/>
         </action>
 
         <action id="doo_VEM">
@@ -244,21 +290,12 @@
             <next end="doo_spletno_konec"/>
         </action>
 
-        <action id="doo_notar">
-            <next end="notar_kontakt"/>
-        </action>
-
-
 
     </actions>
     <ends>
 
         <end id="VEM_kontakt">
-            Pridite na eno izmed točk VEM in uredite ustanovitev sp! Potrebujete le osebni dokument in svojo davčno številko!
-        </end>
-
-        <end id="notar_kontakt">
-            Pojdite do notarja in uredite ustanovitev sp! Potrebujete le osebni dokument in svojo davčno številko!
+            Pridite na eno izmed točk VEM ali k notarju in uredite ustanovitev podjetja! Potrebujete: davčno številko, osebni dokument, potrdilo o plačilu osnovnega kapitala, ime firme, sedež firme, kontaktni podatki, podatki o ustanoviteljih, podatki o zastopniku podjetj, soglasje lastnika postorov kjer želite imeti poslovni naslov, dejavnost podjetja, napoved prihodkov in odhodkov za FURS.
         </end>
 
         <end id="doo_spletno_konec">
