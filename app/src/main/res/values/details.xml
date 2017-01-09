@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sp_details">Samostojni podjetnik je fizična oseba, ki na trgu samostojno opravlja pridobitno dejavnost
+        v okviru organiziranega podjetja (Zakon o gospodarskih družbah, 2006). Ker samostojni podjetnik velja za fizično
+        in ne pravno osebo, ima v lasti ves svoj dobiček, saj mu dobiček predstavlja plačo. S tem dobičkom lahko prosto razpolaga,
+        kar pomeni da denar lahko brez problema dviguje, polaga in z njim plačuje. Njegova naloga pa je, da plačuje davke, tako zase,
+        kot za svoje zaposlene (v primeru, da jih ima). Prav tako pa plačuje tudi prispevke za socialno varnost. Samostojni podjetnik
+        nosi veliko odgovornosti, kar pomeni, da za svoje poslovanje odgovarja z vsem svojim premoženjem, tudi z osebnim. Za ustanovitev
+        s.p. osnovni kapital ni potreben, opravite pa jo lahko brezplačno in enostavno preko portala e-VEM ali fizično na eni od VEM točk.
+        Ta oblika pa ni najbolj primerna za tvegano poslovanje.</string>
+    <string name="doo_details">Družba z omejeno odgovornostjo je pravna oseba, ki ima enega ali več lastnikov. Za d.o.o. je značilno,
+        da ima plačo, ki jo sama sebi izplačuje, zaradi česar ji plača predstavlja dodaten strošek. S svojim dobičkom nima prostih rok
+        razpolaganja, ker za to družbo veljajo določena pravila kdaj lahko denar dvigne, položi na račun. Družba z omejeno odgovornostjo
+        nima tako velike odgovornosti, saj za svoje poslovanje ne odgovarja z osebnim premoženjem. Pri ustanovitvi je potreben ustanovni
+        kapital, in sicer v vrednosti 7.500€. Ta kapital pa podjetje lahko uporabi za svoje poslovanje že od ustanovitve dalje. Osnovni
+        vložek lahko plačate v denarju ali v stvarnem vložku (nepremičninah, premičninah, pravicah ipd.). Za enostavne oblike družbe z
+        omejeno odgovornostjo je ustanovitev preprosta in brezplačna preko portala e-VEM ali v fizični obliki na eni od točk VEM, v primeru
+        bolj zahtevnih oblik pa je potreben obisk notarja. Ta oblika je bolj primerna za tvegano poslovanje, ali pa takrat, ko želite
+        pridobiti visok dobiček.</string>
+</resources>

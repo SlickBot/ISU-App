@@ -2,29 +2,27 @@
     <decisions>
 
         <decision id="START">
-            <more>Seznam vseh točk VEM: http://evem.gov.si/info/tocke-vem/</more>
+            <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM</a></more>
             Kje želite registrirati vaš sp?
-            <answer action="sp_oblika">
+            <answer action="sp_spletno_1">
                 Na spletu (e-VEM)
             </answer>
             <answer action="sp_VEM">
                 Fizično, na eni od točk VEM
             </answer>
-            <answer action="sp_notar">
-                Fizično, na eni od točk VEM
+            <answer action="sp_VEM">
+                Fizično, pri enemu od notarjev
             </answer>
         </decision>
 
-        <decision id="sp_oblika">
-            <more>Več informacij o razlikah med obema??</more>
-            Želite ustanoviti polni ali popoldanski sp?
-            <answer action="sp_spletno_1">
-                Polni S.P.
-                <flag>polni_sp</flag>
+        <decision id="sp_fizicno_extra">
+            Vse potrebno lahko uredite na izbrani točki VEM ali pri notarju z osebnim dokumentom in davčno št.
+            Ali kljub temu želite okvirno pregledati potrebni postopek?
+            <answer action="sp_oblika">
+                Da
             </answer>
-            <answer action="sp_spletno_1">
-                Popoldanski S.P.
-                <flag>popoldanski_sp</flag>
+            <answer action="sp_VEM">
+                Ne
             </answer>
         </decision>
 
@@ -42,17 +40,30 @@
         <decision id="sp_spletno_2">
             <more>Ni podatka o zahtevani opremi!</more>
             Imate zahtevano opremo?
-            <answer action="sp_spletno_3">
+            <answer action="sp_oblika">
                 Da
             </answer>
-            <answer action="sp_spletno_3">
+            <answer action="sp_oblika">
                 Ne
                 <flag>opreme_sp</flag>
             </answer>
         </decision>
 
+        <decision id="sp_oblika">
+            <more>Več informacij o razlikah med obema??</more>
+            Želite ustanoviti polni ali popoldanski sp?
+            <answer action="sp_spletno_3">
+                Polni S.P.
+                <flag>polni_sp</flag>
+            </answer>
+            <answer action="sp_spletno_3">
+                Popoldanski S.P.
+                <flag>popoldanski_sp</flag>
+            </answer>
+        </decision>
+
         <decision id="sp_spletno_3">
-            <more>ime podjetja mora biti v slovenskem jeziku, lahko tudi
+            <more>Ime podjetja mora biti v slovenskem jeziku, lahko tudi
                 v latinskem jeziku, ne sme vsebovati črk, ki noso v slovenski abecedi in
                 jasno se mora razlikovati od imen firm, ki so že vpisana v ragistru podjetij
                 AJPES
@@ -71,7 +82,7 @@
             <more>sedež in poslovni naslov podjetja določite na naslovu, kamor
                 želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma,
                 v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate
-                mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov
+                mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.
             </more>
             Ste določili sedež podjetja?
             <answer action="sp_spletno_5">
@@ -235,7 +246,7 @@
     <ends>
 
         <end id="VEM_kontakt">
-            Pridite na eno izmed točk VEM in uredite ustanovitev sp! Potrebujete le osebni dokument in svojo davčno številko!
+            Pridite na eno izmed točk VEM ali k enemu od notarju in uredite ustanovitev sp! Potrebujete le osebni dokument in svojo davčno številko!
         </end>
 
         <end id="notar_kontakt">

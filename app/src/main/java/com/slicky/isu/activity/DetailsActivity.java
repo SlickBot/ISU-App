@@ -50,10 +50,10 @@ public class DetailsActivity extends AppCompatActivity {
     private void initText(int typeID) {
         switch (typeID) {
             case R.string.sp:
-                tvDetails.setText(R.string.sp_full);
+                tvDetails.setText(R.string.sp_details);
                 break;
             case R.string.doo:
-                tvDetails.setText(R.string.doo_full);
+                tvDetails.setText(R.string.sp_details);
                 break;
             case R.string.dno:
                 tvDetails.setText(R.string.dno_full);
