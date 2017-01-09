@@ -53,7 +53,7 @@ public class DetailsActivity extends AppCompatActivity {
                 tvDetails.setText(R.string.sp_details);
                 break;
             case R.string.doo:
-                tvDetails.setText(R.string.sp_details);
+                tvDetails.setText(R.string.doo_details);
                 break;
             case R.string.dno:
                 tvDetails.setText(R.string.dno_full);
