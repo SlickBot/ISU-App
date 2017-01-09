@@ -48,7 +48,7 @@
         </decision>
 
         <decision id="doo_spletno_2">
-            <more>Ni podatka o zahtevani opremi!</more>
+            <more>Zahtevana oprema: osebni ali tablični računalnik</more>
             Imate zahtevano opremo?
             <answer action="doo_spletno_3">
                 Da

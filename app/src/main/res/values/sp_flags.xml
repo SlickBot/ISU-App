@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="e_vem"><a href="http://evem.gov.si/evem/">Spleta stran e-VEM</a></string>
-    <string name="dig_potrdilo">Pridobite si digitalno potrdilo.</string>
-    <string name="oprema">Pridobite si ustrezno opremo.</string>
+    <string name="dig_potrdilo">Za ustanovitev oziroma registracijo podjetja prek postopka e-VEM boste potrebovali digitalno potrdilo. Na e-VEM portalu so objavljeni registrirani overitelji digitalnih potrdil v Republiki Sloveniji, ki opravljajo storitev izdaje in upravljanja s kvalificiranimi digitalnimi potrdili za varno elektronsko podpisovanje. Za pridobitev digitalnega potrdila sledite navodilom, ki so objavljena na e-VEM portalu.</string>
+    <string name="oprema">Pridobite si ustrezno opremo. (osebni ali tablični računalnik)</string>
     <string name="polni_sp">(MANJKA) Opis za polni sp</string>
     <string name="popoldanski_sp">(MANJKA) Opis za popoldanski sp</string>
     <string name="ime">Izberite primerno ime. (Ime podjetja mora biti v slovenskem jeziku, lahko tudi
