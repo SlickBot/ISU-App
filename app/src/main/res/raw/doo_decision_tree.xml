@@ -48,7 +48,7 @@
         </decision>
 
         <decision id="doo_spletno_2">
-            <more>Zahtevana oprema: osebni ali tablični računalnik</more>
+            <more>Zahtevana oprema: osebni ali tablični računalnik.</more>
             Imate zahtevano opremo?
             <answer action="doo_spletno_3">
                 Da
@@ -60,7 +60,7 @@
         </decision>
 
         <decision id="doo_spletno_3">
-            <more>Ime podjetja mora biti v slovenskem jeziku, lahko tudi v latinskem jeziku, ne sme vsebovati črk, ki noso v slovenski abecedi in se mora jasno razlikovati od imen firm, ki so že vpisana v ragistru podjetij AJPES.</more>
+            <more>Ime podjetja mora biti v slovenskem jeziku, lahko tudi v latinskem jeziku. Ne sme vsebovati črk, ki niso v slovenski abecedi in se mora jasno razlikovati od imen firm, ki so že vpisana v ragistru podjetij AJPES.</more>
             Ste že izbrali primerno ime podjetja?
             <answer action="doo_spletno_4">
                 Da
@@ -72,7 +72,7 @@
         </decision>
 
         <decision id="doo_spletno_4">
-            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
+            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolikor živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
             Ste določili sedež podjetja?
             <answer action="doo_spletno_4_extra">
                 Da
@@ -95,11 +95,7 @@
         </decision>
 
         <decision id="doo_spletno_5">
-            <more>Bodoči podjetniki morajo po novem vlogi za registracijo priložiti
-                overjeno soglasje lastnika prostorov, kjer želijo imeti poslovni naslov.
-                Če je solastnikov več, potrebujejo soglasja vseh lastnikov.
-                Soglasje lahko brezplačno overijo na kateri koli točki VEM
-            </more>
+            <more>Bodoči podjetniki morajo po novem vlogi za registracijo priložiti overjeno soglasje lastnika prostorov, kjer želijo imeti poslovni naslov. Če je solastnikov več, potrebujejo soglasja vseh lastnikov. Soglasje lahko brezplačno overijo na kateri koli točki VEM.</more>
             Imate soglasje lastnika prostorov, kjer želite imeti poslovni naslov?
             <answer action="doo_spletno_6">
                 Da
@@ -123,7 +119,7 @@
         </decision>
 
         <decision id="doo_spletno_7">
-            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste takoj začeli poslovati. Še po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti. Dejevnost izberete iz šifranta SKD.</more>
+            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste začeli poslovati takoj. Tudi po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti. Dejevnost izberete iz šifranta SKD.</more>
             Ste določili dejavnost podjetja?
             <answer action="doo_spletno_8">
                 Da
@@ -147,7 +143,7 @@
         </decision>
 
         <decision id="doo_spletno_9">
-            <more>Ob registraciji d.o.o mora družbeni določiti vsaj enega direktorja. To ste lahko vi, kot ustanovitelj, ali kdo tretji. Direktor, ki ni nikjer zaposlen, se mora v podjetju zaposliti.</more>
+            <more>Ob registraciji d.o.o se mora družbi določiti vsaj enega direktorja. To ste lahko vi, kot ustanovitelj, ali kdo tretji. Direktor, ki ni nikjer zaposlen, se mora v podjetju zaposliti.</more>
             Ste že izbrali zastopnika podjetja?
             <answer action="doo_zastopnik">
                 Da

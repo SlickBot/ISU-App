@@ -35,7 +35,7 @@
         </decision>
 
         <decision id="sp_spletno_2">
-            <more>Zahtevana oprema: osebni ali tablični računalnik</more>
+            <more>Zahtevana oprema: osebni ali tablični računalnik.</more>
             Imate zahtevano opremo?
             <answer action="sp_oblika">
                 Da
@@ -47,7 +47,7 @@
         </decision>
 
         <decision id="sp_oblika">
-            <more>Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p.. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek prej izbrane točke. </more>
+            <more>Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek prej izbrane točke. </more>
             Želite ustanoviti polni ali popoldanski sp?
             <answer action="sp_spletno_3">
                 Polni S.P.
@@ -60,7 +60,7 @@
         </decision>
 
         <decision id="sp_spletno_3">
-            <more>Ime podjetja mora biti v slovenskem jeziku, lahko tudi v latinskem jeziku, ne sme vsebovati črk, ki noso v slovenski abecedi in se mora jasno razlikovati od imen firm, ki so že vpisana v ragistru podjetij AJPES.</more>
+            <more>Ime podjetja mora biti v slovenskem jeziku, lahko tudi v latinskem jeziku. Ne sme vsebovati črk, ki niso v slovenski abecedi in se mora jasno razlikovati od imen firm, ki so že vpisana v ragistru podjetij AJPES.</more>
             Ste že izbrali primerno ime podjetja?
             <answer action="sp_spletno_4">
                 Da
@@ -72,7 +72,7 @@
         </decision>
 
         <decision id="sp_spletno_4">
-            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolior živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
+            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolikor živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
             Ste določili sedež podjetja?
             <answer action="sp_spletno_4_extra">
                 Da
@@ -119,7 +119,7 @@
         </decision>
 
         <decision id="sp_spletno_7">
-            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste takoj začeli poslovati. Še po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti. Dejevnost izberete iz šifranta SKD.</more>
+            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste začeli poslovati takoj. Tudi po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti. Dejevnost izberete iz šifranta SKD.</more>
             Ste določili dejavnost podjetja?
             <answer action="sp_spletno_8">
                 Da
