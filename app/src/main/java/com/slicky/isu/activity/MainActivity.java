@@ -96,11 +96,11 @@ public class MainActivity extends AppCompatActivity
                 startDetails(R.string.doo);
                 break;
             case R.id.dno:
-                startDetails(R.string.dno);
-                break;
+                displayComingSoon();
+                return true;
             case R.id.dd:
-                startDetails(R.string.dd);
-                break;
+                displayComingSoon();
+                return true;
 
             // OSTALO
             case R.id.share:
@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
 
+        // close drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
 

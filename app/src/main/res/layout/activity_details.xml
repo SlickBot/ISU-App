@@ -24,7 +24,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                android:textAlignment="center"
                 android:id="@+id/tvDetails"/>
     </ScrollView>
 
