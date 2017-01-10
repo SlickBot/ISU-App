@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="fizicne_tocke"><![CDATA[<a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM in notarjev</a>]]></string>
-    <string name="e_vem"><![CDATA[<a href="http://evem.gov.si/evem/">Spleta stran e-VEM, kjer opravite registracijo podjetja</a>]]></string>
-    <string name="dig_potrdilo">Za ustanovitev oziroma registracijo podjetja prek postopka e-VEM boste potrebovali digitalno potrdilo. Na e-VEM portalu so objavljeni registrirani overitelji digitalnih potrdil v Republiki Sloveniji, ki opravljajo storitev izdaje in upravljanja s kvalificiranimi digitalnimi potrdili za varno elektronsko podpisovanje. Za pridobitev digitalnega potrdila sledite navodilom, ki so objavljena na e-VEM portalu.</string>
-    <string name="oprema">Pridobite si ustrezno opremo: osebni ali tablični računalnik.</string>
-    <string name="sp_polni">Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p.. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek sistema VEM. Na e-VEM Portalu za podjetja in podjetnike opravite postopek Registracija samostojnega podjetnika (s.p.). Za to boste potrebovali veljavno digitalno potrdilo in zahtevano opremo (osebni ali tablični računalnik). V postopku registracije boste morali vnesti naslednje podatke: predlagan datum vpisa s.p. (dan začetka poslovanja), podatke o podjetniku (ime, priimek, EMŠO, davčno številko, naslov), kontaktne podatke (telefonsko številko, elektronski naslov), ime podjetja, sedež podjetja, dejavnost podjetja in zastopnika samostojnega podjetnika. Če niste lastnik prostorov kjer želite imeti poslovni naslov morate priložiti še overjeno soglasje lastnika prostorov, kjer želite imeti poslovni naslov. V dveh do treh dneh po predlaganem datumu vpisa boste prejeli sklep o registraciji na način, kot ste si ga izbrali v postopku registracije.</string>
-    <string name="sp_popoldanski">Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p.. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek sistema VEM. Na e-VEM Portalu za podjetja in podjetnike opravite postopek Registracija samostojnega podjetnika (s.p.). Za to boste potrebovali veljavno digitalno potrdilo in zahtevano opremo (osebni ali tablični računalnik). V postopku registracije boste morali vnesti naslednje podatke: predlagan datum vpisa s.p. (dan začetka poslovanja), podatke o podjetniku (ime, priimek, EMŠO, davčno številko, naslov), kontaktne podatke (telefonsko številko, elektronski naslov), ime podjetja, sedež podjetja, dejavnost podjetja in zastopnika samostojnega podjetnika. Če niste lastnik prostorov kjer želite imeti poslovni naslov morate priložiti še overjeno soglasje lastnika prostorov, kjer želite imeti poslovni naslov. V dveh do treh dneh po predlaganem datumu vpisa boste prejeli sklep o registraciji na način, kot ste si ga izbrali v postopku registracije.</string>
-    <string name="ime">V postopku registracije podjetja boste morali vnesti ime vašega novega podjetja. Ime mora biti v slovenskem jeziku in jasno se mora razlikovati od imen firm, ki so že vpisana v registru podjetij AJPES. Za samostojnega podjetnika velja, da mora podjetje oz. firma imeti popolno ime, kar pomeni da vključuje ime in priimek podjetnika, oznako dejavnosti, s katero se podjetje ukvarja in oznako s.p. Poleg tega pa ima lahko ime tudi dodatne sestavine (npr. fantazijsko ime). Registrirate pa lahko tudi skrajšano obliko imena podjetja, ki mora vključevati ime in priimek podjetnika in oznako s.p.</string>
-    <string name="sedez">V postopku registracije podjetja boste morali vnesti sedež in poslovni naslov podjetja. Pri določitvi poslovnega naslova podjetja morate najprej določiti kraj, ulico in hišno številko poslovnega prostora, kjer se bo vaša dejavnost opravljala. Lahko izberete prostor, kjer se bo vaša dejavnost v celoti odvijala, prostor od koder boste po večini vodili svoj posel, ali prostor v katerem bo svoje delo opravljalo poslovodstvo družbe.</string>
-    <string name="kontaktni">V postopku registracije podjetja boste morali vnesti kontaktne podatke podjetnika. Kontaktni podatki so telefonska številja, telefaks, elektronski naslov, spletna stran, itd… Ti podatki se lahko nato vpišejo tudi na spletno stran AJPES, če to želite.</string>
-    <string name="soglasje_lastnika">V primeru, da niste lastnik prostora, v katerem opravljate svojo dejavnost in ga želite registrirati, morate zraven prijave za vpis priložiti tudi overjeno izjavo lastnika prostora, z dovoljenjem poslovanja na tem naslovu. Overjeno izjavo lahko pridobite brezplačno na točkah VEM.</string>
-    <string name="dejavnosti">V postopku registracije podjetja boste morali izbrati oziroma določiti dejavnost vašega podjetja. Svojo dejavnost morate izbrati iz šifranta Standardne klasifikacije dejavnosti (SKD). Ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste takoj začeli poslovati in bodo vaš glavni vir dohodkov. Po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti.</string>
-    <string name="dovoljenje_za_dejavnost">Pred začetkom opravljanja dejavnosti boste morali pridobiti ustrezna dovoljenja in izpolniti določene pogoje, ki jih zahteva izbrana dejavnost. Na e-Vem preverite, če za vašo izbrano dejavnost potrebujete kakšno dovoljenje in katere pogoje morate izpolnjevati.</string>
-    <string name="sp_zastopnik">V postopku registracije s.p. lahko, če želite pooblastite osebo za zastopanje. Prokurista lahko določite že v postopku registracije ali še po ustanovutvi podjetja. Za vpis prokurista podjetja potrebujete le EMŠO številko osebe, ki jo pooblaščate za zastopanje. Prokurist lahko v Poslovni register Slovenije brez pooblastila samostojnega podjetnika vnese spremembe podatkov, ne more pa opraviti izbrisa podatkov iz Poslovnega registra Slovenije.</string>
-    <string name="sp_prijava_v_davcni_register">V osmih dneh po registraciji s.p. oziroma vpisu v Poslovni register Slovenije morate davčnemu uradu sporočiti podatke o predvidevanih prihodkih in odhodkih v poslovnem letu, davčno številko in osebno ime, polno ime in skrajšano ime firme, osebo, ki bo vodila poslovne knjige in način vodenja poslovnih knjig (enostavno/dvostavno knjigovodstvo), podatke o poslovnih enotah doma in v tujini, morebitne številke poslovnih računov v tujini, podatke o morebitnih kapitalskih naložbah doma in v tujini ter ali boste svtopili v sistem pavšalne obdavčitve ali v sistem davčnega obračuna na podlagi dejanskih odhodkov. V davčni register se lahko vpišete prek e-postopka Prijava davčnih podatkov za s.p. na portalu e-VEM.</string>
+    <string name="fizicne_tocke"><![CDATA[
+        <b>Fizične točke</b><br>
+        <a href=\"http://evem.gov.si/info/tocke-vem/\">Seznam vseh točk VEM in notarjev</a>
+    ]]></string>
+    <string name="e_vem"><![CDATA[
+        <b>E-VEM</b><br>
+        <a href=\"http://evem.gov.si/evem/\">Spleta stran e-VEM kjer opravite registracijo podjetja</a>
+    ]]></string>
+    <string name="dig_potrdilo"><![CDATA[
+        <b>Digitalno potrdilo</b><br>
+        Za ustanovitev oziroma registracijo podjetja prek postopka e-VEM boste potrebovali digitalno potrdilo. Na e-VEM portalu so objavljeni registrirani overitelji digitalnih potrdil v Republiki Sloveniji, ki opravljajo storitev izdaje in upravljanja s kvalificiranimi digitalnimi potrdili za varno elektronsko podpisovanje. Za pridobitev digitalnega potrdila sledite navodilom, ki so objavljena na e-VEM portalu.</st
+    ]]></string>
+    <string name="oprema"><![CDATA[
+        <b>Obvezna oprema</b><br>
+        Pridobite si ustrezno opremo: osebni ali tablični računalnik.</st
+    ]]></string>
+    <string name="sp_polni"><![CDATA[
+        <b>Polni s. p.</b><br>
+        Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p.. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek sistema VEM. Na e-VEM Portalu za podjetja in podjetnike opravite postopek Registracija samostojnega podjetnika (s.p.). Za to boste potrebovali veljavno digitalno potrdilo in zahtevano opremo (osebni ali tablični računalnik). V postopku registracije boste morali vnesti naslednje podatke: predlagan datum vpisa s.p. (dan začetka poslovanja), podatke o podjetniku (ime, priimek, EMŠO, davčno številko, naslov), kontaktne podatke (telefonsko številko, elektronski naslov), ime podjetja, sedež podjetja, dejavnost podjetja in zastopnika samostojnega podjetnika. Če niste lastnik prostorov kjer želite imeti poslovni naslov morate priložiti še overjeno soglasje lastnika prostorov, kjer želite imeti poslovni naslov. V dveh do treh dneh po predlaganem datumu vpisa boste prejeli sklep o registraciji na način, kot ste si ga izbrali v postopku registracije.</st
+    ]]></string>
+    <string name="sp_popoldanski"><![CDATA[
+        <b>Popoldanski s. p.</b><br>
+        Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p.. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek sistema VEM. Na e-VEM Portalu za podjetja in podjetnike opravite postopek Registracija samostojnega podjetnika (s.p.). Za to boste potrebovali veljavno digitalno potrdilo in zahtevano opremo (osebni ali tablični računalnik). V postopku registracije boste morali vnesti naslednje podatke: predlagan datum vpisa s.p. (dan začetka poslovanja), podatke o podjetniku (ime, priimek, EMŠO, davčno številko, naslov), kontaktne podatke (telefonsko številko, elektronski naslov), ime podjetja, sedež podjetja, dejavnost podjetja in zastopnika samostojnega podjetnika. Če niste lastnik prostorov kjer želite imeti poslovni naslov morate priložiti še overjeno soglasje lastnika prostorov, kjer želite imeti poslovni naslov. V dveh do treh dneh po predlaganem datumu vpisa boste prejeli sklep o registraciji na način, kot ste si ga izbrali v postopku registracije.</st
+    ]]></string>
+    <string name="ime"><![CDATA[
+        <b>Ime</b><br>
+        V postopku registracije podjetja boste morali vnesti ime vašega novega podjetja. Ime mora biti v slovenskem jeziku in jasno se mora razlikovati od imen firm, ki so že vpisana v registru podjetij AJPES. Za samostojnega podjetnika velja, da mora podjetje oz. firma imeti popolno ime, kar pomeni da vključuje ime in priimek podjetnika, oznako dejavnosti, s katero se podjetje ukvarja in oznako s.p. Poleg tega pa ima lahko ime tudi dodatne sestavine (npr. fantazijsko ime). Registrirate pa lahko tudi skrajšano obliko imena podjetja, ki mora vključevati ime in priimek podjetnika in oznako s.p.</st
+    ]]></string>
+    <string name="sedez"><![CDATA[
+        <b>Sedež</b><br>
+        V postopku registracije podjetja boste morali vnesti sedež in poslovni naslov podjetja. Pri določitvi poslovnega naslova podjetja morate najprej določiti kraj, ulico in hišno številko poslovnega prostora, kjer se bo vaša dejavnost opravljala. Lahko izberete prostor, kjer se bo vaša dejavnost v celoti odvijala, prostor od koder boste po večini vodili svoj posel, ali prostor v katerem bo svoje delo opravljalo poslovodstvo družbe.</st
+    ]]></string>
+    <string name="kontaktni"><![CDATA[
+        <b>Kontakti</b><br>
+        V postopku registracije podjetja boste morali vnesti kontaktne podatke podjetnika. Kontaktni podatki so telefonska številja, telefaks, elektronski naslov, spletna stran, itd… Ti podatki se lahko nato vpišejo tudi na spletno stran AJPES, če to želite.</st
+    ]]></string>
+    <string name="soglasje_lastnika"><![CDATA[
+        <b>Soglasje lastnika</b><br>
+        V primeru, da niste lastnik prostora, v katerem opravljate svojo dejavnost in ga želite registrirati, morate zraven prijave za vpis priložiti tudi overjeno izjavo lastnika prostora, z dovoljenjem poslovanja na tem naslovu. Overjeno izjavo lahko pridobite brezplačno na točkah VEM.</st
+    ]]></string>
+    <string name="dejavnosti"><![CDATA[
+        <b>Dejavnosti</b><br>
+        V postopku registracije podjetja boste morali izbrati oziroma določiti dejavnost vašega podjetja. Svojo dejavnost morate izbrati iz šifranta Standardne klasifikacije dejavnosti (SKD). Ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste takoj začeli poslovati in bodo vaš glavni vir dohodkov. Po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti.</st
+    ]]></string>
+    <string name="dovoljenje_za_dejavnost"><![CDATA[
+        <b>Dovoljenje za dejavnost</b><br>
+        Pred začetkom opravljanja dejavnosti boste morali pridobiti ustrezna dovoljenja in izpolniti določene pogoje, ki jih zahteva izbrana dejavnost. Na e-Vem preverite, če za vašo izbrano dejavnost potrebujete kakšno dovoljenje in katere pogoje morate izpolnjevati.</st
+    ]]></string>
+    <string name="sp_zastopnik"><![CDATA[
+        <b>Zastopniki</b><br>
+        V postopku registracije s.p. lahko, če želite pooblastite osebo za zastopanje. Prokurista lahko določite že v postopku registracije ali še po ustanovutvi podjetja. Za vpis prokurista podjetja potrebujete le EMŠO številko osebe, ki jo pooblaščate za zastopanje. Prokurist lahko v Poslovni register Slovenije brez pooblastila samostojnega podjetnika vnese spremembe podatkov, ne more pa opraviti izbrisa podatkov iz Poslovnega registra Slovenije.</st
+    ]]></string>
+    <string name="sp_prijava_v_davcni_register"><![CDATA[
+        <b>Privaja v davčni register</b><br>
+        V osmih dneh po registraciji s.p. oziroma vpisu v Poslovni register Slovenije morate davčnemu uradu sporočiti podatke o predvidevanih prihodkih in odhodkih v poslovnem letu, davčno številko in osebno ime, polno ime in skrajšano ime firme, osebo, ki bo vodila poslovne knjige in način vodenja poslovnih knjig (enostavno/dvostavno knjigovodstvo), podatke o poslovnih enotah doma in v tujini, morebitne številke poslovnih računov v tujini, podatke o morebitnih kapitalskih naložbah doma in v tujini ter ali boste svtopili v sistem pavšalne obdavčitve ali v sistem davčnega obračuna na podlagi dejanskih odhodkov. V davčni register se lahko vpišete prek e-postopka Prijava davčnih podatkov za s.p. na portalu e-VEM.
+    ]]></string>
 </resources>

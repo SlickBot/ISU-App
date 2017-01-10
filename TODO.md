@@ -17,3 +17,4 @@ TODO
 - naredit hyperlink clickable
 - na endActivity prikazat oštevilčene korake
     (po možnosti z boldanimi naslovi teh korakov)
+- odebelji naslove besedil v EndActivity
