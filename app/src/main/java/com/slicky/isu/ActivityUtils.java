@@ -4,6 +4,7 @@ import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.WindowManager;
 import android.widget.TextView;
 import com.slicky.isu.activity.ChooseActivity;
@@ -44,5 +45,6 @@ public class ActivityUtils {
             textView.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
         else
             textView.setText(Html.fromHtml(text));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

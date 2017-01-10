@@ -46,7 +46,7 @@ public class EndActivity extends AppCompatActivity {
             flagSet.add(flag);
         }
 
-        String text = end.getText() + "<br><br>";
+        String text = "<b>" + end.getText() + "</b><br><br>";
         if (flagSet.contains("e_vem"))
             text += getString(R.string.e_vem) + "<br><br>";
         if (flagSet.contains("doo_enoosebni"))
@@ -86,7 +86,7 @@ public class EndActivity extends AppCompatActivity {
         if (flagSet.contains("doo_pripravi_napoved"))
             text += getString(R.string.doo_pripravi_napoved) + "<br><br>";
 
-                utils.setHtmlText(tvEnd, text);
+        utils.setHtmlText(tvEnd, text);
     }
 
     @Override
