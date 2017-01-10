@@ -52,11 +52,11 @@
             Želite ustanoviti polni ali popoldanski sp?
             <answer action="sp_spletno_3">
                 Polni S.P.
-                <flag>polni_sp</flag>
+                <flag>sp_polni</flag>
             </answer>
             <answer action="sp_spletno_3">
                 Popoldanski S.P.
-                <flag>popoldanski_sp</flag>
+                <flag>sp_popoldanski</flag>
             </answer>
         </decision>
 
@@ -127,7 +127,7 @@
             </answer>
             <answer action="sp_spletno_9">
                 Ne
-            <flag>dejavnosti_sp</flag>
+            <flag>dejavnosti</flag>
             </answer>
         </decision>
 
@@ -136,7 +136,7 @@
             Ali vaša dejavnost potrebuje dovoljenje za opravljanje dejavnosti?
             <answer action="sp_spletno_9">
                 Da
-                <flag>dovoljenje_za_dejavnost_sp</flag>
+                <flag>dovoljenje_za_dejavnost</flag>
             </answer>
             <answer action="sp_spletno_9">
                 Ne
@@ -148,7 +148,7 @@
             Želite dodati zastopnika za svoj sp?
             <answer action="sp_davcni_register">
                 Da
-                <flag>zastopnik</flag>
+                <flag>sp_zastopnik</flag>
             </answer>
             <answer action="sp_davcni_register">
                 Ne
@@ -164,7 +164,7 @@
             </answer>
             <answer action="sp_spletno_konec">
                 Ne
-                <flag>prijava_v_davcni_register</flag>
+                <flag>sp_prijava_v_davcni_register</flag>
             </answer>
         </decision>
 

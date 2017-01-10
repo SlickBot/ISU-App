@@ -34,7 +34,7 @@
                 android:contentDescription="@string/more"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/question_mark"
+                android:background="@drawable/question_mark4"
                 android:layout_gravity="center"
                 android:visibility="gone"
                 android:onClick="moreForQuestion"

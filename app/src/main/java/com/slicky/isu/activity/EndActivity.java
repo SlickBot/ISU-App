@@ -47,29 +47,29 @@ public class EndActivity extends AppCompatActivity {
         }
 
         String text = end.getText() + "<br><br>";
-        if (flagSet.contains("polni_sp"))
+        if (flagSet.contains("sp_polni"))
             text += getString(R.string.sp_polni) + "<br><br>";
-        if (flagSet.contains("popoldanski_sp"))
+        if (flagSet.contains("sp_popoldanski"))
             text += getString(R.string.sp_popoldanski) + "<br><br>";
         if (flagSet.contains("dig_potrdilo"))
-            text += getString(R.string.sp_dig_potrdilo) + "<br><br>";
-        if (flagSet.contains("opreme_sp"))
-            text += getString(R.string.sp_oprema) + "<br><br>";
-        if (flagSet.contains("ime_sp"))
-            text += getString(R.string.sp_ime) + "<br><br>";
-        if (flagSet.contains("sedez_sp"))
-            text += getString(R.string.sp_sedez) + "<br><br>";
-        if (flagSet.contains("kontaktni_sp"))
-            text += getString(R.string.sp_kontaktni) + "<br><br>";
-        if (flagSet.contains("soglasje_lastnika_sp"))
-            text += getString(R.string.sp_soglasje_lastnika) + "<br><br>";
-        if (flagSet.contains("dejavnosti_sp"))
-            text += getString(R.string.sp_dejavnosti) + "<br><br>";
-        if (flagSet.contains("dovoljenje_za_dejavnost_sp"))
-            text += getString(R.string.sp_dovoljenje_za_dejavnost) + "<br><br>";
-        if (flagSet.contains("zastopnik_sp"))
+            text += getString(R.string.dig_potrdilo) + "<br><br>";
+        if (flagSet.contains("oprema"))
+            text += getString(R.string.oprema) + "<br><br>";
+        if (flagSet.contains("ime"))
+            text += getString(R.string.ime) + "<br><br>";
+        if (flagSet.contains("sedez"))
+            text += getString(R.string.sedez) + "<br><br>";
+        if (flagSet.contains("kontaktni"))
+            text += getString(R.string.kontaktni) + "<br><br>";
+        if (flagSet.contains("soglasje_lastnika"))
+            text += getString(R.string.soglasje_lastnika) + "<br><br>";
+        if (flagSet.contains("dejavnosti"))
+            text += getString(R.string.dejavnosti) + "<br><br>";
+        if (flagSet.contains("dovoljenje_za_dejavnost"))
+            text += getString(R.string.dovoljenje_za_dejavnost) + "<br><br>";
+        if (flagSet.contains("sp_zastopnik"))
             text += getString(R.string.sp_zastopnik) + "<br><br>";
-        if (flagSet.contains("prijava_v_davcni_register"))
+        if (flagSet.contains("sp_prijava_v_davcni_register"))
             text += getString(R.string.sp_prijava_v_davcni_register) + "<br><br>";
 
                 utils.setHtmlText(tvEnd, text);
