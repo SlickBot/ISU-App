@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="doo_enoosebni">Enoosebna d.o.o je družba, ki ima samo enega družbenika. Ustanovi se tako, da edini družbenik sprejme akt o ustanovitvi. </string>
+    <string name="doo_vecosebni">Večosebna d.o.o je družba, ki ima dva ali več družbenikov. Pri večosebni družbi družbeniki sklenejo družbeno pogodbo.</string>
+    <string name="doo_izberi_zastopnika">Ob registraciji d.o.o mora družbeni določiti vsaj enega direktorja. To ste lahko vi, kot ustanovitelj, ali kdo tretji. Direktor, ki ni nikjer zaposlen, se mora v podjetju zaposliti.</string>
+    <string name="doo_zberi_podatke_zastopnika">Zbrati morate naslednje podatke o zastopniku, ki ste ga izbrali: ime, priimek, emšo, vrsta zastopanja(direktor/prokurist), način zastopanja( samostojno/skupno).</string>
+    <string name="doo_pridobi_podatke">Potrebujete naslednje podatke o vseh ustanoviteljih podjetja: ime, priimek, EMŠO, delež v kapitalu, ste že lastnik kakšega podjetja(da/ne).</string>
+    <string name="doo_pripravi_napoved">Uredite napoved prihodkov in odhodkov za FURS.</string>
+
+</resources>

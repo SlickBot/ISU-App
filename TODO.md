@@ -3,7 +3,7 @@ TODO
 
 **ASAP**
 - filter za flags (EndActivity) - sp ✓
-- filter za flags (EndActivity) - doo
+- filter za flags (EndActivity) - doo ✓
 - zmanjšaj padding na ScrollView in RelativeView (ChooseActivity) ✓
 
 **OTHER**

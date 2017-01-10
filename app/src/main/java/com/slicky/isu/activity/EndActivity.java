@@ -47,6 +47,12 @@ public class EndActivity extends AppCompatActivity {
         }
 
         String text = end.getText() + "<br><br>";
+        if (flagSet.contains("e_vem"))
+            text += getString(R.string.e_vem) + "<br><br>";
+        if (flagSet.contains("doo_enoosebni"))
+            text += getString(R.string.doo_enoosebni) + "<br><br>";
+        if (flagSet.contains("doo_vecosebni"))
+            text += getString(R.string.doo_vecosebni) + "<br><br>";
         if (flagSet.contains("sp_polni"))
             text += getString(R.string.sp_polni) + "<br><br>";
         if (flagSet.contains("sp_popoldanski"))
@@ -71,6 +77,14 @@ public class EndActivity extends AppCompatActivity {
             text += getString(R.string.sp_zastopnik) + "<br><br>";
         if (flagSet.contains("sp_prijava_v_davcni_register"))
             text += getString(R.string.sp_prijava_v_davcni_register) + "<br><br>";
+        if (flagSet.contains("doo_izberi_zastopnika"))
+            text += getString(R.string.doo_izberi_zastopnika) + "<br><br>";
+        if (flagSet.contains("doo_zberi_podatke_zastopnika"))
+            text += getString(R.string.doo_zberi_podatke_zastopnika) + "<br><br>";
+        if (flagSet.contains("doo_pridobi_podatke"))
+            text += getString(R.string.doo_pridobi_podatke) + "<br><br>";
+        if (flagSet.contains("doo_pripravi_napoved"))
+            text += getString(R.string.doo_pripravi_napoved) + "<br><br>";
 
                 utils.setHtmlText(tvEnd, text);
     }

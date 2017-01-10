@@ -8,6 +8,7 @@
             Kje želite registrirati vaš sp?
             <answer action="sp_spletno_1">
                 Na spletu (e-VEM)
+                <flag>e_vem</flag>
             </answer>
             <answer action="sp_fizicno_extra">
                 Fizično, na eni od točk VEM ali pri notarju

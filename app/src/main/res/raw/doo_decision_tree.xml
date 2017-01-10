@@ -2,15 +2,16 @@
     <decisions>
 
         <decision id="START">
-            <more>Več informacij o razlikah med obema??</more>
+            <more>Enoosebna d.o.o je družba, ki ima samo enega družbenika. Ustanovi se tako, da edini družbenik sprejme akt o ustanovitvi.
+                Večosebna d.o.o je družba, ki ima dva ali več družbenikov. Pri večosebni družbi družbeniki sklenejo družbeno pogodbo.</more>
             Želite ustanoviti enoosebni ali večosebni d. o. o.
             <answer action="doo_enoosebni">
                 Enoosebni d. o. o.
-                <flag>enoosebni_doo</flag>
+                <flag>doo_enoosebni</flag>
             </answer>
             <answer action="doo_fizicno_extra">
                 Večosebni d. o. o.
-                <flag>vecosebni_doo</flag>
+                <flag>doo_vecosebni</flag>
             </answer>
         </decision>
 
@@ -126,7 +127,7 @@
             </answer>
             <answer action="doo_spletno_9">
                 Ne
-            <flag>dejavnosti_doo</flag>
+            <flag>dejavnosti</flag>
             </answer>
         </decision>
 
@@ -135,7 +136,7 @@
             Ali vaša dejavnost potrebuje dovoljenje za opravljanje dejavnosti?
             <answer action="doo_spletno_9">
                 Da
-            <flag>dovoljenje_za_dejavnost_doo</flag>
+            <flag>dovoljenje_za_dejavnost</flag>
             </answer>
             <answer action="doo_spletno_9">
                 Ne
@@ -150,7 +151,7 @@
             </answer>
             <answer action="doo_podatki_o_ustanoviteljih">
                 Ne
-            <flag>izberi_zastopnika</flag>
+            <flag>doo_izberi_zastopnika</flag>
             </answer>
         </decision>
 
@@ -162,7 +163,7 @@
             </answer>
             <answer action="doo_podatki_o_ustanoviteljih">
                 Ne
-            <flag>zberi_podatke_zastopnika_doo</flag>
+            <flag>doo_zberi_podatke_zastopnika</flag>
             </answer>
         </decision>
 
@@ -174,7 +175,7 @@
             </answer>
             <answer action="doo_napoved_FURS">
                 Ne
-                <flag>pridobi_podatke_doo</flag>
+                <flag>doo_pridobi_podatke</flag>
             </answer>
         </decision>
 
@@ -185,7 +186,7 @@
             </answer>
             <answer action="doo_spletno_konec">
                 Ne
-            <flag>pripravi_napoved_doo</flag>
+            <flag>doo_pripravi_napoved</flag>
             </answer>
         </decision>
 
