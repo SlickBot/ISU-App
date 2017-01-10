@@ -237,12 +237,6 @@
             <next end="sp_spletno_konec"/>
         </action>
 
-        <action id="sp_notar">
-            <next end="notar_kontakt"/>
-        </action>
-
-
-
     </actions>
     <ends>
 
@@ -250,12 +244,8 @@
             Pridite na eno izmed točk VEM ali k enemu od notarju in uredite ustanovitev sp! Potrebujete le osebni dokument in svojo davčno številko!
         </end>
 
-        <end id="notar_kontakt">
-            Pojdite do notarja in uredite ustanovitev sp! Potrebujete le osebni dokument in svojo davčno številko!
-        </end>
-
         <end id="sp_spletno_konec">
-            Odprtje poslovnega računa!
+            Spodaj se nahajajo vsi potrebni koraki in informacije v zvezi z registracijo podjetja, ki so prilagojeni vaši odgovorom na prej zastavljena vprašanja.
         </end>
 
     </ends>
