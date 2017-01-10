@@ -1,16 +1,21 @@
 package com.slicky.isu.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import com.slicky.isu.ActivityUtils;
 import com.slicky.isu.R;
 import com.slicky.isu.service.MyService;
@@ -19,16 +24,16 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private boolean shouldShowNotification = false;
-    private ActivityUtils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String title = getResources().getString(R.string.welcome_screen_title2);
+        String title = getString(R.string.welcome_screen_title2);
         setTitle(title);
 
+        ActivityUtils.getInstance().removeToolBar(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity
 
             // OSTALO
             case R.id.share:
+                share();
                 break;
 
             case R.id.about:
@@ -129,6 +135,15 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    private void share() {
+        new AlertDialog.Builder(this)
+                .setTitle("Delitev uspešna!")
+                .setMessage("Uspešno si delil podatke s: KGB, SOVA, MI5, NSA in UDBA.")
+                .setNeutralButton(android.R.string.ok, null)
+                .setIcon(R.drawable.ic_done)
+                .show();
+    }
+
     public void spClick(View view) {
         startChoose(R.raw.sp_decision_tree);
     }
@@ -138,11 +153,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void dnoClick(View view) {
-        startChoose(R.raw.example_decision_tree);
+        displayComingSoon();
     }
 
     public void ddClick(View view) {
-        startChoose(R.raw.example_decision_tree);
+        displayComingSoon();
     }
 
     public void toggleNotification(View view) {
@@ -154,5 +169,23 @@ public class MainActivity extends AppCompatActivity
             startService(intent);
             shouldShowNotification = true;
         }
+    }
+
+    private void displayComingSoon() {
+        Snackbar snackbar = Snackbar.make(
+                findViewById(android.R.id.content),
+                R.string.coming_soon,
+                Snackbar.LENGTH_SHORT
+        );
+
+        int snackbarId = android.support.design.R.id.snackbar_text;
+        View view = snackbar.getView();
+        TextView tv = (TextView) view.findViewById(snackbarId);
+
+        tv.setGravity(Gravity.CENTER_HORIZONTAL);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
+            tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
+        snackbar.show();
     }
 }

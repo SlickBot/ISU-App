@@ -1,5 +1,7 @@
 package com.slicky.isu.activity;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
@@ -198,12 +200,13 @@ public class ChooseActivity extends AppCompatActivity {
         if (selectedAnswer == answer)
             return;
 
-        int selectedColor = utils.getColor(this, R.color.colorAccent);
+        int selectedColor = utils.getColor(this, R.color.colorSecondary);
         int unselectedColor = utils.getColor(this, R.color.colorPrimary);
 
-        view.setBackgroundColor(selectedColor);
+        startAnimation(view, 500, unselectedColor, selectedColor);
+
         if (selectedView != null)
-            selectedView.setBackgroundColor(unselectedColor);
+            startAnimation(selectedView, 500, selectedColor, unselectedColor);
 
         selectedView = view;
         selectedAnswer = answer;
@@ -225,6 +228,21 @@ public class ChooseActivity extends AppCompatActivity {
         intent.putExtra("title", currentDecision.getText());
         intent.putExtra("text", currentDecision.getMore());
         startActivity(intent);
+    }
+
+    private void startAnimation(final TextView view, int duration, int colorFrom, int colorTo) {
+        final ValueAnimator anim = new ValueAnimator();
+        anim.setIntValues(colorFrom, colorTo);
+        anim.setDuration(duration);
+        anim.setEvaluator(new ArgbEvaluator());
+        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                int val = (int) valueAnimator.getAnimatedValue();
+                view.setBackgroundColor(val);
+            }
+        });
+        anim.start();
     }
 
     private void alertAndDie(DecisionTreeException e) {

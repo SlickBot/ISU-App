@@ -53,16 +53,16 @@ public class DetailsActivity extends AppCompatActivity {
     private void initText(int typeID) {
         switch (typeID) {
             case R.string.sp:
-                utils.setHtmlText(tvDetails, getResources().getString(R.string.sp_details));
+                utils.setHtmlText(tvDetails, getString(R.string.sp_details));
                 break;
             case R.string.doo:
-                utils.setHtmlText(tvDetails, getResources().getString(R.string.doo_details));
+                utils.setHtmlText(tvDetails, getString(R.string.doo_details));
                 break;
             case R.string.dno:
-                utils.setHtmlText(tvDetails, getResources().getString(R.string.dno_full));
+                utils.setHtmlText(tvDetails, getString(R.string.dno_full));
                 break;
             case R.string.dd:
-                utils.setHtmlText(tvDetails, getResources().getString(R.string.dd_full));
+                utils.setHtmlText(tvDetails, getString(R.string.dd_full));
                 break;
         }
     }

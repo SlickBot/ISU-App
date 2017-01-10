@@ -46,7 +46,7 @@ public class NotifyingThread extends Thread {
         Notification.Builder builder = new Notification.Builder(service);
         builder.setSmallIcon(R.drawable.man_with_tie)
                 .setContentIntent(pendingIntent)
-                .setContentTitle(service.getResources().getString(R.string.app_name))
+                .setContentTitle(service.getString(R.string.app_name))
                 .setContentText("Odpri")
                 .setSubText("Klikni da odpreš!");
 
