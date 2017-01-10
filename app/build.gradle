@@ -32,11 +32,11 @@ android {
 dependencies {
     // jars
 //    compile fileTree(dir: 'libs', include: ['*.jar'])
-    // android test
+    // android tests
     androidTestCompile "com.android.support:support-annotations:$androidVersion"
     androidTestCompile "com.android.support.test:runner:$androidTestVersion"
     androidTestCompile "com.android.support.test:rules:$androidTestVersion"
-    // test
+    // tests
     testCompile "junit:junit:$junitVersion"
     // libs
     compile "com.android.support:appcompat-v7:$androidVersion"

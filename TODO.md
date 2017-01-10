@@ -7,7 +7,7 @@ TODO
 - zmanjšaj padding na ScrollView in RelativeView (ChooseActivity) ✓
 
 **OTHER**
-- nova ikona za vprašaj (ChooseActivity)✓
+- nova ikona za vprašaj (ChooseActivity) ✓
 - ScrollView iz sredine na vrh ✓
 - sredinska poravnava teksta v DetailsActivity ✓
 - sredinska poravnava teksta v EndActivity ✓
