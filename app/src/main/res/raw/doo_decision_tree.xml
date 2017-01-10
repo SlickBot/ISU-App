@@ -16,13 +16,16 @@
         </decision>
 
         <decision id="doo_enoosebni">
-            <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM</a></more>
+            <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM in notarjev</a></more>
             Kje želite registrirati vaš enoosebni d. o. o.?
             <answer action="doo_spletno_1">
                 Na spletu (e-VEM)
             </answer>
             <answer action="doo_fizicno_extra">
-                Fizično, na eni od točk VEM ali pri notarju
+                Fizično, na eni od točk VEM
+            </answer>
+            <answer action="doo_fizicno_extra">
+                Fizično, pri enemu od notarjev
             </answer>
         </decision>
 

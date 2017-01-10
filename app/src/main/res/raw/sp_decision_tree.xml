@@ -3,7 +3,7 @@
 
         <decision id="START">
             <more>
-                <a href="http://evem.gov.si/info/tocke-vem/">Seznam vseh točk VEM</a>
+                <a href="http://evem.gov.si/info/tocke-vem/">Seznam vseh točk VEM in notarjev</a>
             Postopek na točki e-VEM je brezplačen in v povprečju traja 2 dni. Postopek na točki VEM je prav tako brezplačen in v povprečju traja 4 dni. Postopek pri notarju je plačljiv.</more>
             Kje želite registrirati vaš sp?
             <answer action="sp_spletno_1">
@@ -11,7 +11,10 @@
                 <flag>e_vem</flag>
             </answer>
             <answer action="sp_fizicno_extra">
-                Fizično, na eni od točk VEM ali pri notarju
+                Fizično, na eni od točk VEM
+            </answer>
+            <answer action="sp_fizicno_extra">
+                Fizično, pri enemu od notarjev
             </answer>
         </decision>
 

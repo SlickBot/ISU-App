@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="fizicne_tocke"><![CDATA[<a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM in notarjev</a>]]></string>
     <string name="e_vem"><![CDATA[<a href="http://evem.gov.si/evem/">Spleta stran e-VEM, kjer opravite registracijo podjetja</a>]]></string>
     <string name="dig_potrdilo">Za ustanovitev oziroma registracijo podjetja prek postopka e-VEM boste potrebovali digitalno potrdilo. Na e-VEM portalu so objavljeni registrirani overitelji digitalnih potrdil v Republiki Sloveniji, ki opravljajo storitev izdaje in upravljanja s kvalificiranimi digitalnimi potrdili za varno elektronsko podpisovanje. Za pridobitev digitalnega potrdila sledite navodilom, ki so objavljena na e-VEM portalu.</string>
     <string name="oprema">Pridobite si ustrezno opremo: osebni ali tablični računalnik.</string>
