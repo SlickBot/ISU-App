@@ -14,7 +14,7 @@ TODO
 - sredinska poravnava teksta v MoreActivity ✓
 - spremeni flage v sp v obliko -> sp_* ✓
 - spremeni barvo hyperlinkov ✓
-- naredit hyperlink clickable
+- naredit hyperlink clickable ✓
 - na endActivity prikazat oštevilčene korake
     (po možnosti z boldanimi naslovi teh korakov)
-- odebelji naslove besedil v EndActivity
+- odebelji naslove besedil v EndActivity ✓
