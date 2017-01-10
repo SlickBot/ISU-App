@@ -25,7 +25,7 @@
             android:contentDescription="@string/more"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/question_mark8"
+            android:background="@drawable/question_mark9"
             android:layout_gravity="center"
             android:visibility="gone"
             android:onClick="moreForQuestion"
