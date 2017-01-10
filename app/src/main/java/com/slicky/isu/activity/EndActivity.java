@@ -46,45 +46,47 @@ public class EndActivity extends AppCompatActivity {
             flagSet.add(flag);
         }
 
-        String text = "<b>" + end.getText() + "</b><br><br>";
+        String text = "<b>" + end.getText() + "</b><br><br><br>";
+        if (flagSet.contains("fizicne_tocke"))
+            text += getString(R.string.fizicne_tocke) + "<br><br><br>";
         if (flagSet.contains("e_vem"))
-            text += getString(R.string.e_vem) + "<br><br>";
+            text += getString(R.string.e_vem) + "<br><br><br>";
         if (flagSet.contains("doo_enoosebni"))
-            text += getString(R.string.doo_enoosebni) + "<br><br>";
+            text += getString(R.string.doo_enoosebni) + "<br><br><br>";
         if (flagSet.contains("doo_vecosebni"))
-            text += getString(R.string.doo_vecosebni) + "<br><br>";
+            text += getString(R.string.doo_vecosebni) + "<br><br><br>";
         if (flagSet.contains("sp_polni"))
-            text += getString(R.string.sp_polni) + "<br><br>";
+            text += getString(R.string.sp_polni) + "<br><br><br>";
         if (flagSet.contains("sp_popoldanski"))
-            text += getString(R.string.sp_popoldanski) + "<br><br>";
+            text += getString(R.string.sp_popoldanski) + "<br><br><br>";
         if (flagSet.contains("dig_potrdilo"))
-            text += getString(R.string.dig_potrdilo) + "<br><br>";
+            text += getString(R.string.dig_potrdilo) + "<br><br><br>";
         if (flagSet.contains("oprema"))
-            text += getString(R.string.oprema) + "<br><br>";
+            text += getString(R.string.oprema) + "<br><br><br>";
         if (flagSet.contains("ime"))
-            text += getString(R.string.ime) + "<br><br>";
+            text += getString(R.string.ime) + "<br><br><br>";
         if (flagSet.contains("sedez"))
-            text += getString(R.string.sedez) + "<br><br>";
+            text += getString(R.string.sedez) + "<br><br><br>";
         if (flagSet.contains("kontaktni"))
-            text += getString(R.string.kontaktni) + "<br><br>";
+            text += getString(R.string.kontaktni) + "<br><br><br>";
         if (flagSet.contains("soglasje_lastnika"))
-            text += getString(R.string.soglasje_lastnika) + "<br><br>";
+            text += getString(R.string.soglasje_lastnika) + "<br><br><br>";
         if (flagSet.contains("dejavnosti"))
-            text += getString(R.string.dejavnosti) + "<br><br>";
+            text += getString(R.string.dejavnosti) + "<br><br><br>";
         if (flagSet.contains("dovoljenje_za_dejavnost"))
-            text += getString(R.string.dovoljenje_za_dejavnost) + "<br><br>";
+            text += getString(R.string.dovoljenje_za_dejavnost) + "<br><br><br>";
         if (flagSet.contains("sp_zastopnik"))
-            text += getString(R.string.sp_zastopnik) + "<br><br>";
+            text += getString(R.string.sp_zastopnik) + "<br><br><br>";
         if (flagSet.contains("sp_prijava_v_davcni_register"))
-            text += getString(R.string.sp_prijava_v_davcni_register) + "<br><br>";
+            text += getString(R.string.sp_prijava_v_davcni_register) + "<br><br><br>";
         if (flagSet.contains("doo_izberi_zastopnika"))
-            text += getString(R.string.doo_izberi_zastopnika) + "<br><br>";
+            text += getString(R.string.doo_izberi_zastopnika) + "<br><br><br>";
         if (flagSet.contains("doo_zberi_podatke_zastopnika"))
-            text += getString(R.string.doo_zberi_podatke_zastopnika) + "<br><br>";
+            text += getString(R.string.doo_zberi_podatke_zastopnika) + "<br><br><br>";
         if (flagSet.contains("doo_pridobi_podatke"))
-            text += getString(R.string.doo_pridobi_podatke) + "<br><br>";
+            text += getString(R.string.doo_pridobi_podatke) + "<br><br><br>";
         if (flagSet.contains("doo_pripravi_napoved"))
-            text += getString(R.string.doo_pripravi_napoved) + "<br><br>";
+            text += getString(R.string.doo_pripravi_napoved) + "<br><br><br>";
 
         utils.setHtmlText(tvEnd, text);
     }

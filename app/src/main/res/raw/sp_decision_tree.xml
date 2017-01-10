@@ -79,7 +79,7 @@
         </decision>
 
         <decision id="sp_spletno_4">
-            <more>sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolikor živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
+            <more>Sedež in poslovni naslov podjetja določite na naslovu, kamor želite prejemati pošto podjetja. Naslov podjetja je lahko tudi doma, v kolikor živite v večstanovanjsi hiši, če v okviru dejavnosti opravljate mirno dejavnost. Mirna dejavnost je dejavnost, ki ne moti sosedov.</more>
             Ste določili sedež podjetja?
             <answer action="sp_spletno_4_extra">
                 Da
@@ -126,7 +126,7 @@
         </decision>
 
         <decision id="sp_spletno_7">
-            <more>ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste začeli poslovati takoj. Tudi po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti. Dejevnost izberete iz šifranta SKD.</more>
+            <more>Ob odprtju podjetja je smiselno registrirati tiste in toliko dejavnosti, s katerimi boste začeli poslovati takoj. Tudi po registraciji podjetja boste lahko v podjetje dodajali nove dejavnosti. Dejevnost izberete iz šifranta SKD.</more>
             Ste določili dejavnost podjetja?
             <answer action="sp_spletno_8">
                 Da
@@ -138,7 +138,7 @@
         </decision>
 
         <decision id="sp_spletno_8">
-            <more>pred pričetkom opravljanja dejavnosti je potrebno pridobiti dovoljenje za opravljanje dejavosti, če se zahteva za dejavnost, ki jo nameravate opravljati. Seznam takih dejavnosti najdete na e-vem.</more>
+            <more>Pred pričetkom opravljanja dejavnosti je potrebno pridobiti dovoljenje za opravljanje dejavosti, če se zahteva za dejavnost, ki jo nameravate opravljati. Seznam takih dejavnosti najdete na e-vem.</more>
             Ali vaša dejavnost potrebuje dovoljenje za opravljanje dejavnosti?
             <answer action="sp_spletno_9">
                 Da
@@ -150,7 +150,7 @@
         </decision>
 
         <decision id="sp_spletno_9">
-            <more>v kolikor želi samostojni podjetnik v svojem podjetju pooblatiti osebo za zastopanje, lahko pri postopku registracije (ali še po ustanovitvi podjetja) določi prokurista podjetja. Za vpis prokurista podjetja potrebuje podjetnik le EMŠO številko osebe, in jo pooblašča za zastopanje.</more>
+            <more>V kolikor želi samostojni podjetnik v svojem podjetju pooblatiti osebo za zastopanje, lahko pri postopku registracije (ali še po ustanovitvi podjetja) določi prokurista podjetja. Za vpis prokurista podjetja potrebuje podjetnik le EMŠO številko osebe, in jo pooblašča za zastopanje.</more>
             Želite dodati zastopnika za svoj sp?
             <answer action="sp_davcni_register">
                 Da
@@ -162,7 +162,7 @@
         </decision>
 
         <decision id="sp_davcni_register">
-            <more>na E-VEM lahko oddate prijavo v davčni register, ali pa to storite v 8 dneh od dneva vpisa v PRS.
+            <more>Na E-VEM lahko oddate prijavo v davčni register, ali pa to storite v 8 dneh od dneva vpisa v PRS.
             </more>
             Ste že oddali prijavo v davčni register??
             <answer action="sp_spletno_konec">
