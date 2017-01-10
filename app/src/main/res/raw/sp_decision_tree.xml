@@ -21,6 +21,7 @@
         </decision>
 
         <decision id="sp_fizicno_extra">
+            <more><a href='http://evem.gov.si/info/tocke-vem/'>Seznam vseh točk VEM in notarjev</a></more>
             Vse potrebno lahko uredite na izbrani točki VEM ali pri notarju. Ali kljub temu želite okvirno pregledati potrebni postopek?
             <answer action="sp_oblika">
                 Da
