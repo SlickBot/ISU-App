@@ -12,9 +12,11 @@
             </answer>
             <answer action="sp_fizicno_extra">
                 Fizično, na eni od točk VEM
+                <flag>fizicne_tocke</flag>
             </answer>
             <answer action="sp_fizicno_extra">
                 Fizično, pri enemu od notarjev
+                <flag>fizicne_tocke</flag>
             </answer>
         </decision>
 
