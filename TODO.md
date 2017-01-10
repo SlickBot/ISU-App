@@ -15,3 +15,5 @@ TODO
 - spremeni flage v sp v obliko -> sp_* ✓
 - spremeni barvo hyperlinkov ✓
 - naredit hyperlink clickable
+- na endActivity prikazat oštevilčene korake
+    (po možnosti z boldanimi naslovi teh korakov)
