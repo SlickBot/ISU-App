@@ -63,6 +63,8 @@ public class EndActivity extends AppCompatActivity {
             text += getString(R.string.dig_potrdilo) + "<br><br><br>";
         if (flagSet.contains("oprema"))
             text += getString(R.string.oprema) + "<br><br><br>";
+        if (flagSet.contains("doo_ime"))
+            text += getString(R.string.doo_ime) + "<br><br><br>";
         if (flagSet.contains("ime"))
             text += getString(R.string.ime) + "<br><br><br>";
         if (flagSet.contains("sedez"))

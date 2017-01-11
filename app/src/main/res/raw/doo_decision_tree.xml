@@ -4,7 +4,7 @@
         <decision id="START">
             <more>Enoosebna d.o.o je družba, ki ima samo enega družbenika. Ustanovi se tako, da edini družbenik sprejme akt o ustanovitvi.
                 Večosebna d.o.o je družba, ki ima dva ali več družbenikov. Pri večosebni družbi družbeniki sklenejo družbeno pogodbo.</more>
-            Želite ustanoviti enoosebni ali večosebni d. o. o.
+            Želite ustanoviti enoosebni ali večosebni d. o. o.?
             <answer action="doo_enoosebni">
                 Enoosebni d. o. o.
                 <flag>doo_enoosebni</flag>
@@ -20,6 +20,7 @@
             Kje želite registrirati vaš enoosebni d. o. o.?
             <answer action="doo_spletno_1">
                 Na spletu (e-VEM)
+                <flag>e_vem</flag>
             </answer>
             <answer action="doo_fizicno_extra">
                 Fizično, na eni od točk VEM
@@ -73,7 +74,7 @@
             </answer>
             <answer action="doo_spletno_4">
                 Ne
-            <flag>ime</flag>
+            <flag>doo_ime</flag>
             </answer>
         </decision>
 
@@ -113,7 +114,7 @@
         </decision>
 
         <decision id="doo_spletno_6">
-            <more>Podatki kot so: e-mail, spletni naslov, telefonska številka, fax,...</more>
+            <more>V Poslovni register Slovenije (PRS) lahko vpišete tudi kontaktne podatke, in sicer: telefon, telefaks, naslov elektronske pošte, spletni naslov. Podatki se objavijo na spletni strani AJPES, lahko pa označite, da objave ne želite.</more>
             Imate izbrane kontaktne podatke?
             <answer action="doo_spletno_7">
                 Da

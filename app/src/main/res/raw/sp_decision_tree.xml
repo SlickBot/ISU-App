@@ -115,7 +115,7 @@
         </decision>
 
         <decision id="sp_spletno_6">
-            <more>Podatki kot so: e-mail, spletni naslov, telefonska številka, fax,...</more>
+            <more>V Poslovni register Slovenije (PRS) lahko vpišete tudi kontaktne podatke, in sicer: telefon, telefaks, naslov elektronske pošte, spletni naslov. Podatki se objavijo na spletni strani AJPES, lahko pa označite, da objave ne želite.</more>
             Imate izbrane kontaktne podatke?
             <answer action="sp_spletno_7">
                 Da
@@ -165,7 +165,7 @@
         <decision id="sp_davcni_register">
             <more>Na E-VEM lahko oddate prijavo v davčni register, ali pa to storite v 8 dneh od dneva vpisa v PRS.
             </more>
-            Ste že oddali prijavo v davčni register??
+            Ste že oddali prijavo v davčni register?
             <answer action="sp_spletno_konec">
                 Da
             </answer>
