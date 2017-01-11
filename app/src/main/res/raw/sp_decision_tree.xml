@@ -55,14 +55,14 @@
         </decision>
 
         <decision id="sp_oblika">
-            <more>Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek prej izbrane točke. </more>
+            <more>Pravni status polnega s. p. in popoldanskega s. p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s. p. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s. p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek prej izbrane točke. </more>
             Želite ustanoviti polni ali popoldanski s. p.?
             <answer action="sp_spletno_3">
-                Polni S.P.
+                Polni S. P.
                 <flag>sp_polni</flag>
             </answer>
             <answer action="sp_spletno_3">
-                Popoldanski S.P.
+                Popoldanski S. P.
                 <flag>sp_popoldanski</flag>
             </answer>
         </decision>

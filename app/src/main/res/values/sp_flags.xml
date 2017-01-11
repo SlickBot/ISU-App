@@ -18,15 +18,15 @@
     ]]></string>
     <string name="sp_polni"><![CDATA[
         <b>Opis: Polni s. p.</b><br>
-        Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve.
+        Pravni status polnega s. p. in popoldanskega s. p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s. p. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s. p. nižji. Za oba velja isti postopek ustanovitve.
     ]]></string>
     <string name="sp_popoldanski"><![CDATA[
         <b>Opis: Popoldanski s. p.</b><br>
-        Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve.
+        Pravni status polnega s. p. in popoldanskega s. p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s. p. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s. p. nižji. Za oba velja isti postopek ustanovitve.
     ]]></string>
     <string name="ime"><![CDATA[
         <b>Izberite ime podjetja</b><br>
-        V postopku registracije podjetja boste morali vnesti ime vašega novega podjetja. Ime mora biti v slovenskem jeziku in jasno se mora razlikovati od imen firm, ki so že vpisana v registru podjetij AJPES. Za samostojnega podjetnika velja, da mora podjetje oz. firma imeti popolno ime, kar pomeni da vključuje ime in priimek podjetnika, oznako dejavnosti, s katero se podjetje ukvarja in oznako s.p. Poleg tega pa ima lahko ime tudi dodatne sestavine (npr. fantazijsko ime). Registrirate pa lahko tudi skrajšano obliko imena podjetja, ki mora vključevati ime in priimek podjetnika in oznako s.p.
+        V postopku registracije podjetja boste morali vnesti ime vašega novega podjetja. Ime mora biti v slovenskem jeziku in jasno se mora razlikovati od imen firm, ki so že vpisana v registru podjetij AJPES. Za samostojnega podjetnika velja, da mora podjetje oz. firma imeti popolno ime, kar pomeni da vključuje ime in priimek podjetnika, oznako dejavnosti, s katero se podjetje ukvarja in oznako s. p. Poleg tega pa ima lahko ime tudi dodatne sestavine (npr. fantazijsko ime). Registrirate pa lahko tudi skrajšano obliko imena podjetja, ki mora vključevati ime in priimek podjetnika in oznako s. p.
     ]]></string>
     <string name="sedez"><![CDATA[
         <b>Izberite sedež podjetja</b><br>
@@ -50,10 +50,10 @@
     ]]></string>
     <string name="sp_zastopnik"><![CDATA[
         <b>Izberite zastopnika podjetja</b><br>
-        V postopku registracije s.p. lahko, če želite pooblastite osebo za zastopanje. Prokurista lahko določite že v postopku registracije ali še po ustanovutvi podjetja. Za vpis prokurista podjetja potrebujete le EMŠO številko osebe, ki jo pooblaščate za zastopanje. Prokurist lahko v Poslovni register Slovenije brez pooblastila samostojnega podjetnika vnese spremembe podatkov, ne more pa opraviti izbrisa podatkov iz Poslovnega registra Slovenije.
+        V postopku registracije s. p. lahko, če želite pooblastite osebo za zastopanje. Prokurista lahko določite že v postopku registracije ali še po ustanovutvi podjetja. Za vpis prokurista podjetja potrebujete le EMŠO številko osebe, ki jo pooblaščate za zastopanje. Prokurist lahko v Poslovni register Slovenije brez pooblastila samostojnega podjetnika vnese spremembe podatkov, ne more pa opraviti izbrisa podatkov iz Poslovnega registra Slovenije.
     ]]></string>
     <string name="sp_prijava_v_davcni_register"><![CDATA[
         <b>Oddajte prijavo v davčni register</b><br>
-        V osmih dneh po registraciji s.p. oziroma vpisu v Poslovni register Slovenije morate davčnemu uradu sporočiti podatke o predvidevanih prihodkih in odhodkih v poslovnem letu, davčno številko in osebno ime, polno ime in skrajšano ime firme, osebo, ki bo vodila poslovne knjige in način vodenja poslovnih knjig (enostavno/dvostavno knjigovodstvo), podatke o poslovnih enotah doma in v tujini, morebitne številke poslovnih računov v tujini, podatke o morebitnih kapitalskih naložbah doma in v tujini ter ali boste svtopili v sistem pavšalne obdavčitve ali v sistem davčnega obračuna na podlagi dejanskih odhodkov. V davčni register se lahko vpišete prek e-postopka Prijava davčnih podatkov za s.p. na portalu e-VEM. <a href=\"http://evem.gov.si/info/poslujem/davki/vpis-v-davcni-register/\">Povezava na vpis</a>
+        V osmih dneh po registraciji s. p. oziroma vpisu v Poslovni register Slovenije morate davčnemu uradu sporočiti podatke o predvidevanih prihodkih in odhodkih v poslovnem letu, davčno številko in osebno ime, polno ime in skrajšano ime firme, osebo, ki bo vodila poslovne knjige in način vodenja poslovnih knjig (enostavno/dvostavno knjigovodstvo), podatke o poslovnih enotah doma in v tujini, morebitne številke poslovnih računov v tujini, podatke o morebitnih kapitalskih naložbah doma in v tujini ter ali boste svtopili v sistem pavšalne obdavčitve ali v sistem davčnega obračuna na podlagi dejanskih odhodkov. V davčni register se lahko vpišete prek e-postopka Prijava davčnih podatkov za s. p. na portalu e-VEM. <a href=\"http://evem.gov.si/info/poslujem/davki/vpis-v-davcni-register/\">Povezava na vpis</a>
     ]]></string>
 </resources>

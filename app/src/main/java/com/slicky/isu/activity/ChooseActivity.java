@@ -25,6 +25,9 @@ import java.util.List;
 public class ChooseActivity extends AppCompatActivity {
     private static final String TAG = ChooseActivity.class.getSimpleName();
 
+    private static final int DURATION_FADEIN = 1000;
+    private static final int DURATION_COLOR = 500;
+
     private ActivityUtils utils = ActivityUtils.getInstance();
     private DecisionTreeParser parser = DecisionTreeParser.INSTANCE;
 
@@ -154,14 +157,14 @@ public class ChooseActivity extends AppCompatActivity {
         // display questions
         llQuestions.animate()
             .alpha(1.0f)
-            .setDuration(1000)
+            .setDuration(DURATION_FADEIN)
             .setListener(null);
 
         // display answers
         llAnswers.animate()
                 .alpha(1.0f)
-                .setStartDelay(500)
-                .setDuration(1000)
+                .setStartDelay(DURATION_FADEIN /2)
+                .setDuration(DURATION_FADEIN)
                 .setListener(null);
     }
 
@@ -203,10 +206,10 @@ public class ChooseActivity extends AppCompatActivity {
         int selectedColor = utils.getColor(this, R.color.colorSecondary);
         int unselectedColor = utils.getColor(this, R.color.colorPrimary);
 
-        startAnimation(view, 500, unselectedColor, selectedColor);
+        startAnimation(view, DURATION_COLOR, unselectedColor, selectedColor);
 
         if (selectedView != null)
-            startAnimation(selectedView, 500, selectedColor, unselectedColor);
+            startAnimation(selectedView, DURATION_COLOR, selectedColor, unselectedColor);
 
         selectedView = view;
         selectedAnswer = answer;
