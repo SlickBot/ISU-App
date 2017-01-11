@@ -188,20 +188,15 @@ object DecisionTreeParser {
     }
 
     private fun getContent(element: Element?): String? {
-//        return buildString {
-//            element?.elementIterator()?.forEach {
-//                append((it as Element).asXML())
-//            }
-//            element?.data?.let {
-//                append(it as String)
-//            }
-//        }
-        return element?.content()?.map {
-            when (it) {
-                is Text -> it.text.trim()
-                is Element -> it.asXML()
-                else -> null
+        val content = element?.content()
+                ?: return null
+        return buildString {
+            content.forEach {
+                when (it) {
+                    is Text -> appendln(it.text.trim())
+                    is Element -> appendln(it.asXML())
+                }
             }
-        }?.filter { !it.isNullOrEmpty() }?.joinToString("\n")
+        }
     }
 }
