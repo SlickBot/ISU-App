@@ -3,7 +3,7 @@
 **Informacijski sistemi v upravi**
 
 Seminarska naloga za predmet Informacijski sistemi v upravi.
-Skozi serijo vprašanj uporabniku predlaga postopek
+Program skozi serijo vprašanj uporabniku predlaga postopek
 za ustanovitev izbranega tipa podjetja.
 
 ## TODO
@@ -17,12 +17,11 @@ za ustanovitev izbranega tipa podjetja.
 ***OTHER***
 - nova ikona za vprašaj (ChooseActivity) ✓
 - ScrollView iz sredine na vrh ✓
-- sredinska poravnava teksta v DetailsActivity ✓
-- sredinska poravnava teksta v EndActivity ✓
-- sredinska poravnava teksta v MoreActivity ✓
+- sredinska poravnava teksta (DetailsActivity) ✓
+- sredinska poravnava teksta (EndActivity) ✓
+- sredinska poravnava teksta (MoreActivity) ✓
 - spremeni flage v sp v obliko -> sp_* ✓
 - spremeni barvo hyperlinkov ✓
-- na endActivity prikazat oštevilčene korake
-    (po možnosti z boldanimi naslovi teh korakov)
-- odebelji naslove besedil v EndActivity ✓
+- na endActivity prikazat oštevilčene korake (EndActivity)
+- odebelji naslove besedil (EndActivity) ✓
 - podrobnosti za dno in dd prikažeta "comming soon" ✓

@@ -72,7 +72,7 @@ public class ChooseActivity extends AppCompatActivity {
     }
 
     public void continueClick(View view) {
-        if (selectedView == null || selectedAnswer == null) {
+        if (selectedAnswer == null) {
             displaySelectionNotification();
             return;
         }
@@ -129,10 +129,10 @@ public class ChooseActivity extends AppCompatActivity {
         // display question
         tvQuestions.setText(decision.getText());
         // display more if not present
-        if (decision.getMore() != null)
-            ivMore.setVisibility(View.VISIBLE);
-        else
-            ivMore.setVisibility(View.GONE);
+        ivMore.setVisibility(decision.getMore() != null ? View.VISIBLE : View.GONE);
+
+        // unselect answers
+        selectedAnswer = null;
 
         // set decision as current
         currentDecision = decision;
