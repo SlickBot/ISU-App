@@ -5,7 +5,7 @@
             <more>
                 <a href="http://evem.gov.si/info/tocke-vem/">Seznam vseh točk VEM in notarjev</a>
             Postopek na točki e-VEM je brezplačen in v povprečju traja 2 dni. Postopek na točki VEM je prav tako brezplačen in v povprečju traja 4 dni. Postopek pri notarju je plačljiv.</more>
-            Kje želite registrirati vaš sp?
+            Kje želite registrirati vaš s. p.?
             <answer action="sp_spletno_1">
                 Na spletu (e-VEM)
                 <flag>e_vem</flag>
@@ -56,7 +56,7 @@
 
         <decision id="sp_oblika">
             <more>Pravni status polnega s.p. in popoldanskega s.p. je enak, enake so tudi pravice in dolžnosti polnega in popoldanskega s.p. Razlikujeta se le v plačilu prispevkov za socialno varnost, ki so pri popoldanskem s.p. nižji. Za oba velja isti postopek ustanovitve, ki ga opravite prek prej izbrane točke. </more>
-            Želite ustanoviti polni ali popoldanski sp?
+            Želite ustanoviti polni ali popoldanski s. p.?
             <answer action="sp_spletno_3">
                 Polni S.P.
                 <flag>sp_polni</flag>
@@ -152,7 +152,7 @@
 
         <decision id="sp_spletno_9">
             <more>V kolikor želi samostojni podjetnik v svojem podjetju pooblatiti osebo za zastopanje, lahko pri postopku registracije (ali še po ustanovitvi podjetja) določi prokurista podjetja. Za vpis prokurista podjetja potrebuje podjetnik le EMŠO številko osebe, in jo pooblašča za zastopanje.</more>
-            Želite dodati zastopnika za svoj sp?
+            Želite dodati zastopnika za svoj s. p.?
             <answer action="sp_davcni_register">
                 Da
                 <flag>sp_zastopnik</flag>
